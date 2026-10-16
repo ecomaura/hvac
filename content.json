@@ -1,0 +1,336 @@
+{
+  "config": {
+    "logo": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792143950/WhatsApp_Image_2026-10-16_at_11.58.57_1.jpg",
+    "name": "F S Aircon & Infratech",
+    "whatsapp": "91YOURNUMBER",
+    "email": "fsairconinfratech@gmail.com",
+    "address": "Gr. Floor, Shop No. 3, Anwar Compound, Sainik Nagar, Almas Colony Road, Mumbra Kausa, Thane, Maharashtra – 400612, India",
+    "gstin": "27CXLPA4596H1Z4"
+  },
+  "products": [
+    {
+      "s": "symphony-air-coolers",
+      "n": "Symphony Air Coolers",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792143998/movicool-xl-100-g-symphony-original-imafynghevpjejy6-500x500.webp",
+      "d": "Commercial and industrial air coolers for large, open or semi-open spaces.",
+      "i": "Symphony coolers use evaporative technology and are widely used where spot or area cooling is needed without a full air-conditioning plant. The range we supply covers portable commercial units, industrial coolers and desert-type coolers.",
+      "items": [
+        [
+          "Symphony Movicool XE 100 Commercial Cooler",
+          "Mobile commercial cooler for shops, halls and workspaces."
+        ],
+        [
+          "Symphony Movicool XE 200 Commercial Cooler",
+          "Larger mobile unit for wider commercial areas."
+        ],
+        [
+          "Symphony Venti-Cool 25U Industrial Cooler",
+          "Industrial cooler for factory floors and workshops."
+        ],
+        [
+          "Symphony Movicool DD 125 Desert Cooler",
+          "Desert-type cooler for dry, hot environments."
+        ]
+      ],
+      "apps": [
+        "Workshops and factories",
+        "Shops and showrooms",
+        "Warehouses",
+        "Event and open halls"
+      ],
+      "ref": "Symphony commercial air coolers"
+    },
+    {
+      "s": "air-conditioners",
+      "n": "Air Conditioners",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144024/carrier-ductable-ac-units-500x500.webp",
+      "d": "Ductable, cassette and VRV air-conditioning equipment for commercial buildings.",
+      "i": "Commercial air conditioning ranges from ductable units serving several rooms to VRV systems for larger buildings. The right choice depends on floor area, layout, occupancy and ceiling space.",
+      "items": [
+        [
+          "Carrier Ductable AC",
+          "Ductable unit for central distribution through ducting."
+        ],
+        [
+          "Blue Star DSA1441R3 1TR Ductable AC",
+          "1 TR ductable air conditioner for smaller zones."
+        ],
+        [
+          "Daikin Inverter Cassette Air Conditioner",
+          "Ceiling cassette with inverter operation."
+        ],
+        [
+          "VRV AC System",
+          "Variable refrigerant flow system for multi-zone buildings."
+        ]
+      ],
+      "apps": [
+        "Offices",
+        "Retail outlets",
+        "Clinics and institutions",
+        "Multi-floor buildings"
+      ],
+      "ref": "ductable and cassette air-conditioning systems"
+    },
+    {
+      "s": "air-ducts",
+      "n": "AC Ducts",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144024/carrier-ductable-ac-units-500x500.webp",
+      "d": "Duct products and ducted equipment for air distribution.",
+      "i": "This category covers three different things: ducting material (GI and pre-insulated panels), ducted air-conditioning equipment that connects to ducts, and duct installation solutions. They are listed together because they are specified together.",
+      "items": [
+        [
+          "Voltas Ductable Air Conditioner",
+          "Ducted equipment (not duct material); distributes air via ducting."
+        ],
+        [
+          "PI Air Conditioning Duct",
+          "Pre-insulated duct for air distribution."
+        ],
+        [
+          "GI Round Ducting",
+          "Galvanized iron round duct."
+        ],
+        [
+          "Daikin Ducted Air Conditioner",
+          "Ducted equipment for concealed air-conditioning."
+        ]
+      ],
+      "apps": [
+        "Concealed AC distribution",
+        "Offices and showrooms",
+        "Industrial ventilation runs"
+      ],
+      "ref": "AC ducting and ductable equipment"
+    },
+    {
+      "s": "cassette-air-conditioners",
+      "n": "Cassette Air Conditioners",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144061/symphony-venti-cool-20u-industrial-cooler-500x500.webp",
+      "d": "Ceiling-mounted cassette units for even air distribution.",
+      "i": "Cassette units sit flush in the ceiling and discharge air in one, two or four directions. Selection should follow room shape, ceiling void and load, so we suggest sharing your space details before choosing.",
+      "items": [
+        [
+          "Chilled Water Cassette AC",
+          "Cassette unit operating on a chilled-water system."
+        ],
+        [
+          "Daikin Cassette AC 2 Ton",
+          "2 TR ceiling cassette."
+        ],
+        [
+          "Four-Way Cassette Air Conditioner",
+          "Four-direction airflow for central ceiling positions."
+        ],
+        [
+          "Samsung One-Way Cassette AC",
+          "One-way discharge for narrow spaces or wall-side positions."
+        ]
+      ],
+      "apps": [
+        "Offices and meeting rooms",
+        "Showrooms",
+        "Restaurants",
+        "Reception areas"
+      ],
+      "ref": "cassette air conditioners"
+    },
+    {
+      "s": "evaporative-air-coolers",
+      "n": "Evaporative Air Coolers",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144091/symphony-venti-cool-20u-industrial-cooler-500x500_1.webp",
+      "d": "Water-based cooling for ventilated industrial and commercial areas.",
+      "i": "Evaporative coolers cool air by passing it over wetted media. They work best in well-ventilated spaces where fresh-air supply is available. Actual results depend on local humidity and airflow, so we do not quote fixed temperature drops.",
+      "items": [
+        [
+          "Symphony Venti Cool 20U Industrial Cooler",
+          "Industrial air cooler for large work areas."
+        ],
+        [
+          "Evaporative Air Cooler",
+          "General evaporative cooling unit."
+        ],
+        [
+          "Symphony Movicool XXL Industrial Air Cooler",
+          "High-capacity mobile industrial cooler."
+        ],
+        [
+          "Symphony Venti Cool 8U",
+          "Compact industrial cooler."
+        ]
+      ],
+      "apps": [
+        "Factories",
+        "Workshops",
+        "Warehouses",
+        "Poultry and open sheds"
+      ],
+      "ref": "evaporative air coolers"
+    },
+    {
+      "s": "exhaust-fans",
+      "n": "Exhaust Fans",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144111/product-jpeg-500x500.webp",
+      "d": "Inline fans, kitchen hoods and commercial exhaust fans.",
+      "i": "Exhaust equipment removes heat, fumes, steam and stale air. Fans, hoods and cabinet units do different jobs: hoods capture at the source, fans move the air.",
+      "items": [
+        [
+          "Inline Exhaust Fan",
+          "Fan fitted within a duct run."
+        ],
+        [
+          "Kitchen Exhaust Hood",
+          "Hood that captures cooking fumes at the source."
+        ],
+        [
+          "Commercial Kitchen Exhaust Fan",
+          "Fan for commercial kitchen extraction."
+        ],
+        [
+          "Cabinet Inline Exhaust Fan",
+          "Enclosed inline fan for quieter, concealed installation."
+        ]
+      ],
+      "apps": [
+        "Commercial kitchens",
+        "Restaurants",
+        "Toilets and utility areas",
+        "Workshops"
+      ],
+      "ref": "exhaust fans and kitchen exhaust"
+    },
+    {
+      "s": "air-handling-units",
+      "n": "Air Handling Units",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144129/40lw006-4rd-single-skin-ceiling-suspended-ahu-carrier-500x500.webp",
+      "d": "AHUs, fan coil units and fabricated duct sections.",
+      "i": "An air handling unit conditions and circulates air through ductwork, typically with chilled water. Fan coil units serve smaller zones. Selection depends on airflow, coil capacity and available space.",
+      "items": [
+        [
+          "40LW006 4RD Single Skin Ceiling Suspended AHU Carrier",
+          "Ceiling-suspended Carrier AHU."
+        ],
+        [
+          "Fabricated Rectangular Duct",
+          "Rectangular duct fabricated for AHU connections."
+        ],
+        [
+          "Fan Coil Unit",
+          "Chilled-water unit for zone cooling."
+        ]
+      ],
+      "apps": [
+        "Commercial buildings",
+        "Hospitals and institutions",
+        "Plant rooms",
+        "Clean and controlled areas"
+      ],
+      "ref": "air handling units"
+    },
+    {
+      "s": "exhaust-systems",
+      "n": "Exhaust Systems",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144152/product-jpeg-500x500_1.webp",
+      "d": "Ventilation and exhaust ducting for commercial and industrial sites.",
+      "i": "Exhaust systems combine fans, ducting and discharge points to remove contaminated or hot air. Duct sizing and routing matter as much as the fan, and we support both supply and fabrication.",
+      "items": [
+        [
+          "Galvanized Iron Air Duct",
+          "GI duct for supply and exhaust runs."
+        ],
+        [
+          "Air Ventilation System",
+          "Ventilation arrangement for enclosed spaces."
+        ],
+        [
+          "GI Ducting Fabrication Service",
+          "Made-to-size GI duct fabrication."
+        ]
+      ],
+      "apps": [
+        "Industrial plants",
+        "Basements and car parks",
+        "Kitchens",
+        "Warehouses"
+      ],
+      "ref": "GI ducting and ventilation"
+    },
+    {
+      "s": "insulation-sheets",
+      "n": "Insulation Sheets",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144190/whatsapp-image-2023-08-11-at-12-36-55-pm-500x500.webp",
+      "d": "Foil and bubble insulation for ducting and thermal control.",
+      "i": "Insulation limits heat gain on ducts and surfaces. We supply sheet products used with HVAC ducting and similar installations. Share your application and we will confirm suitable thickness and type.",
+      "items": [
+        [
+          "Aerolam XLPE 9mm Aluminium Foil",
+          "Aluminium-foil faced XLPE insulation, 9 mm."
+        ],
+        [
+          "Aerolam Air Bubble Insulation",
+          "Air bubble foil insulation sheet."
+        ]
+      ],
+      "apps": [
+        "Duct wrapping",
+        "Roof and wall insulation",
+        "Cold and thermal enclosures"
+      ],
+      "ref": "HVAC insulation sheets"
+    }
+  ],
+  "services": [
+    {
+      "n": "HVAC Equipment Supply",
+      "p": "air-conditioners",
+      "t": "Commercial and industrial equipment supply.",
+      "a": "Offices, shops, plants",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144243/images_1.jpg"
+    },
+    {
+      "n": "AC System Selection",
+      "p": "cassette-air-conditioners",
+      "t": "Help choosing ductable, cassette or VRV systems for your space.",
+      "a": "New fit-outs and upgrades",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144290/modern-industrial-hvac-system-and-ventilation-pipes-installed-in-a-mechanical-room-photo.jpg"
+    },
+    {
+      "n": "Ducting & Duct Fabrication",
+      "p": "air-ducts",
+      "t": "GI and pre-insulated duct supply and fabrication.",
+      "a": "AC and ventilation runs",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144323/istockphoto-2225232969-612x612.jpg"
+    },
+    {
+      "n": "Ventilation & Exhaust Systems",
+      "p": "exhaust-systems",
+      "t": "Fans, hoods and ducted exhaust.",
+      "a": "Kitchens, plants, basements",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144370/images_2.jpg"
+    },
+    {
+      "n": "HVAC Insulation Solutions",
+      "p": "insulation-sheets",
+      "t": "Foil and bubble insulation for ducts and surfaces.",
+      "a": "Duct wrapping, thermal control",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144427/360_F_2016359334_aIn37XOnOxPIwYFV70TqWAjLA9ZrWOaT.jpg"
+    },
+    {
+      "n": "Project-Specific Enquiries",
+      "p": null,
+      "t": "Send your requirement and we will respond with suitable options.",
+      "a": "Any HVAC project",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144564/images_3.jpg"
+    }
+  ],
+  "clients": [
+    [
+      "Nykaa",
+      "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144243/images_1.jpg"
+    ],
+    [
+      "Flipkart",
+      "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144590/Flipkart-logo.jpg"
+    ]
+  ]
+}
