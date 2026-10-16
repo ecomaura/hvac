@@ -113,6 +113,12 @@ const CONFIG={
   address:"Gr. Floor, Shop No. 3, Anwar Compound, Sainik Nagar, Almas Colony Road, Mumbra Kausa, Thane, Maharashtra – 400612, India",
   img:"images/products/"             // product image folder
 };
+const CLIENTS=[
+  // ["Client name","filename in images/clients/"], e.g. ["ABC Industries","abc.png"],
+];
+const clientLogos=()=>CLIENTS.length
+  ? CLIENTS.map(([n,f])=>`<div><img src="images/clients/${f}" alt="${n}" loading="lazy" style="max-height:60px;max-width:80%;object-fit:contain"></div>`).join("")
+  : Array(8).fill('<div>Client logo</div>').join("");
 const wa=msg=>`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hello FS Aircon & Infratech, "+msg)}`;
 const waBtn=(msg,label="Enquire on WhatsApp",cls="wa sm")=>`<a class="btn ${cls}" href="${wa(msg)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 
@@ -178,7 +184,7 @@ home:()=>({t:"FS Aircon & Infratech | HVAC, Ducting & Industrial Cooling",d:"Com
 <section class="s"><div class="wrap"><h2>Product categories</h2><p class="lead">Nine categories of HVAC equipment and materials, supplied against your project requirements.</p><div class="grid">${P.map(pcard).join("")}</div></div></section>
 <section class="s alt"><div class="wrap"><h2>Solutions and applications</h2><div class="grid">${[["Commercial buildings","Cassette, ductable and VRV systems."],["Industrial facilities","Evaporative coolers, exhaust and ducting."],["Retail and office spaces","Compact comfort cooling."],["Kitchens","Hoods, exhaust fans and ducted extraction."],["Warehousing","Large-volume cooling and ventilation."]].map(([a,b])=>`<div class="card"><div class="b"><h3>${a}</h3><p>${b}</p></div></div>`).join("")}</div></div></section>
 <section class="s"><div class="wrap split"><div><h2>Why choose FS Aircon & Infratech?</h2><ul class="ticks"><li>Product selection matched to project requirements</li><li>Commercial and industrial HVAC solutions</li><li>Ducting and ventilation capability</li><li>Assistance with equipment specifications</li><li>Enquiry-driven project support</li></ul>${L("/about","About the company","btn o")}</div>
-<div class="note"><h3>Clients and projects</h3><p>Verified client logos and installation photographs will appear here once supplied.</p>${L("/clients","View clients and projects","btn o sm")}</div></div></section>
+<div><h3>Our clients</h3><div class="logos">${clientLogos()}</div><p style="margin-top:14px">${L("/clients","View clients and projects","btn o sm")}</p></div></div></section>
 ${cta()}`}),
 about:()=>({t:"About Us | FS Aircon & Infratech",d:"About F S Aircon & Infratech, an HVAC and infrastructure equipment supplier based in Thane, Maharashtra.",h:`
 <div class="pagehead">${crumb([["/","Home"],["/about","About Us"]])}<div class="wrap"><h1>About FS Aircon & Infratech</h1><p class="lead">A Thane-based supplier of air-conditioning, ventilation, ducting and cooling equipment for commercial and industrial users.</p></div></div>
@@ -194,7 +200,7 @@ services:()=>({t:"Services | FS Aircon & Infratech",d:"HVAC equipment supply, sy
 <div class="note" style="margin-top:24px">Installation, commissioning and maintenance are not listed until confirmed by the company. Ask us about your requirement.</div></div></section>${cta()}`}),
 clients:()=>({t:"Clients & Projects | FS Aircon & Infratech",d:"Client references and project photographs from FS Aircon & Infratech.",h:`
 <div class="pagehead">${crumb([["/","Home"],["/clients","Clients"]])}<div class="wrap"><h1>Clients and projects</h1><p class="lead">Verified client logos and project photographs will be shown here.</p></div></div>
-<section class="s"><div class="wrap"><h2>Clients</h2><div class="logos">${Array(8).fill('<div>Client logo</div>').join("")}</div>
+<section class="s"><div class="wrap"><h2>Clients</h2><div class="logos">${clientLogos()}</div>
 <h2 style="margin-top:40px">Project gallery</h2><div class="grid">${["Commercial HVAC","Industrial cooling","Ducting and ventilation"].map(c=>`<div class="card"><div class="im" style="display:flex;align-items:center;justify-content:center;color:#8896a3;font-size:.85rem">Project photo</div><div class="b"><h3>${c}</h3><p>Add a verified project description.</p></div></div>`).join("")}</div>
 <div class="note" style="margin-top:24px">No client names or projects are shown until supplied and verified.</div></div></section>${cta()}`}),
 contact:()=>({t:"Contact Us | FS Aircon & Infratech",d:"Contact F S Aircon & Infratech, Mumbra Kausa, Thane. Request a quote on WhatsApp or email.",h:`
