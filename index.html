@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>F S Aircon & Infratech | Air Conditioning & HVAC Solutions</title>
+  <meta name="description" content="Explore air-conditioning installation, servicing, maintenance, and HVAC solutions from F S Aircon & Infratech. Contact the team to discuss your requirements.">
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="F S Aircon & Infratech | Air Conditioning & HVAC Solutions">
+  <meta property="og:description" content="Professional air-conditioning and HVAC solutions designed to keep your spaces comfortable and efficient.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/97272.jpg">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0879B9',
+              deepNavy: '#17265C',
+              darkNavy: '#101B3D',
+              lightBlue: '#EAF5FC',
+              offWhite: '#F7F9FC',
+              text: '#4D586B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #FFFFFF;
+      color: #4D586B;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* Fluid typography helper */
+    .hero-title {
+      font-size: clamp(2rem, 5vw + 0.5rem, 3.75rem);
+      line-height: 1.1;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw + 0.5rem, 2.75rem);
+      line-height: 1.18;
+    }
+
+    /* Subtle focus outline */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid #0879B9;
+      outline-offset: 2px;
+    }
+
+    /* Accordion transition styling */
+    .faq-content {
+      transition: max-height 0.3s ease-out, opacity 0.25s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+    .faq-item.active .faq-content {
+      opacity: 1;
+    }
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-chevron {
+      transition: transform 0.25s ease-in-out;
+    }
+
+    /* Remove tap highlight on mobile */
+    input, button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body class="relative antialiased selection:bg-[#EAF5FC] selection:text-[#17265C]">
+
+  <!-- ============================================================== -->
+  <!-- 1. STICKY HEADER & NAVIGATION                                 -->
+  <!-- ============================================================== -->
+  <header id="main-header" class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded p-1">
+        <!-- Logo Image with Fallback Shield -->
+        <div class="h-12 w-auto max-w-[200px] flex items-center overflow-hidden">
+          <img 
+            src="images/97272.jpg" 
+            alt="F S Aircon & Infratech Logo" 
+            class="h-full w-auto object-contain max-h-12"
+            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex items-center gap-2\'><div class=\'w-10 h-10 bg-brand-deepNavy rounded flex items-center justify-center text-white font-bold tracking-wider text-sm\'>FS</div><div class=\'leading-tight\'><span class=\'block text-sm font-bold text-brand-deepNavy tracking-tight font-display\'>F S AIRCON</span><span class=\'block text-[10px] tracking-widest text-brand-blue font-semibold uppercase\'>& INFRATECH</span></div></div>';"
+          >
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-8 text-[15px] font-medium text-slate-700" aria-label="Main Navigation">
+        <a href="#home" class="hover:text-brand-blue transition-colors duration-150 py-1">Home</a>
+        <a href="#about" class="hover:text-brand-blue transition-colors duration-150 py-1">About</a>
+        <a href="#services" class="hover:text-brand-blue transition-colors duration-150 py-1">Services</a>
+        <a href="#applications" class="hover:text-brand-blue transition-colors duration-150 py-1">Solutions</a>
+        <a href="#maintenance" class="hover:text-brand-blue transition-colors duration-150 py-1">Maintenance</a>
+        <a href="#projects" class="hover:text-brand-blue transition-colors duration-150 py-1">Our Work</a>
+        <a href="#contact" class="hover:text-brand-blue transition-colors duration-150 py-1">Contact</a>
+      </nav>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-[#076ba5] active:bg-[#065b8c] rounded transition-colors shadow-sm">
+          Get a Quote
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        id="mobile-menu-btn" 
+        type="button" 
+        aria-expanded="false" 
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+        class="md:hidden inline-flex items-center justify-center p-2.5 rounded text-slate-700 hover:text-brand-blue hover:bg-slate-100 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="close-icon" class="hidden w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2">
+      <a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">About</a>
+      <a href="#services" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">Services</a>
+      <a href="#applications" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">Solutions</a>
+      <a href="#maintenance" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">Maintenance</a>
+      <a href="#projects" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">Our Work</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded text-base font-medium text-slate-800 hover:bg-brand-lightBlue hover:text-brand-blue">Contact</a>
+      <div class="pt-4 flex flex-col gap-2">
+        <a href="#contact" class="mobile-nav-link text-center w-full py-3 text-xs font-bold uppercase tracking-wider text-white bg-brand-blue rounded hover:bg-[#076ba5]">
+          Get a Quote
+        </a>
+        <a href="javascript:void(0)" onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about your air-conditioning and HVAC services.')" class="text-center w-full py-3 text-xs font-bold uppercase tracking-wider text-slate-800 border border-slate-300 rounded hover:bg-slate-50">
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    
+    <!-- ============================================================== -->
+    <!-- 2. HERO SECTION                                                -->
+    <!-- ============================================================== -->
+    <section class="relative bg-white pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Left Column: Copy & Actions -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Eyebrow -->
+            <div class="inline-flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-blue">
+                Air Conditioning & HVAC Solutions
+              </p>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="hero-title font-display font-extrabold text-brand-darkNavy tracking-tight uppercase">
+              Comfort You Can<br>Count On.
+            </h1>
+
+            <!-- Supporting Headline -->
+            <h2 class="text-xl sm:text-2xl font-semibold text-brand-deepNavy">
+              Reliable Air Conditioning & HVAC Solutions.
+            </h2>
+
+            <!-- Supporting Paragraph -->
+            <p class="text-base sm:text-lg text-brand-text max-w-xl leading-relaxed">
+              Professional air-conditioning and HVAC solutions designed to keep your spaces comfortable, efficient, and ready for everyday life.
+            </p>
+
+            <!-- CTA Group -->
+            <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-[#076ba5] rounded shadow-sm transition-colors text-center">
+                Get a Quote
+              </a>
+              <button 
+                type="button"
+                onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about your air-conditioning and HVAC services.')" 
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-brand-deepNavy bg-brand-lightBlue hover:bg-[#d8ecf8] border border-[#c3e3f7] rounded transition-colors text-center"
+              >
+                <!-- WhatsApp SVG icon -->
+                <svg class="w-4 h-4 fill-current text-[#25D366]" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.147-.532-1.745-.73-2.87-2.518-2.957-2.635-.088-.117-.708-.942-.708-1.797 0-.855.449-1.275.609-1.45.16-.175.348-.219.465-.219.116 0 .233.001.335.006.107.005.25.04.39.377.145.349.494 1.205.538 1.293.043.088.072.19.014.305-.058.117-.087.19-.174.292-.088.102-.185.228-.264.306-.089.088-.182.183-.078.361.104.178.463.764.994 1.238.683.609 1.26.797 1.438.885.178.088.283.073.388-.048.106-.12.449-.523.568-.702.119-.178.238-.148.397-.089.159.059 1.01.476 1.184.564.174.088.291.132.334.205.044.073.044.423-.1.828zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.658 1.444 5.168L2 22l4.98-1.306C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+                </svg>
+                Chat on WhatsApp
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional HVAC Photograph -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+              <img 
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80" 
+                alt="HVAC technician working on professional air conditioning installation" 
+                class="w-full h-[320px] sm:h-[400px] lg:h-[460px] object-cover"
+                loading="eager"
+              >
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-darkNavy/90 via-brand-darkNavy/40 to-transparent p-5 text-white">
+                <p class="text-xs font-semibold tracking-wider uppercase text-blue-200">Engineering Standard</p>
+                <p class="text-sm font-medium">Precision Air-Conditioning & Mechanical Ventilation</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 3. QUICK SERVICE STRIP                                         -->
+    <!-- ============================================================== -->
+    <section class="bg-brand-offWhite border-b border-slate-200 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          
+          <div class="flex items-center gap-3 px-2 md:px-6 pt-3 md:pt-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0"></span>
+            <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-brand-darkNavy">
+              Air Conditioning
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3 px-2 md:px-6 pt-3 md:pt-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0"></span>
+            <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-brand-darkNavy">
+              Installation
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3 px-2 md:px-6 pt-3 md:pt-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0"></span>
+            <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-brand-darkNavy">
+              HVAC Solutions
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3 px-2 md:px-6 pt-3 md:pt-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0"></span>
+            <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-brand-darkNavy">
+              Service & Maintenance
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 4. INTRODUCTION SECTION (ABOUT)                                -->
+    <!-- ============================================================== -->
+    <section id="about" class="py-16 lg:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Editorial Text Side -->
+          <div class="lg:col-span-6 space-y-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-blue">
+              About F S Aircon & Infratech
+            </p>
+            <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+              Engineered For Comfort.<br>Built Around Your Needs.
+            </h2>
+            <div class="space-y-4 text-base text-brand-text leading-relaxed">
+              <p>
+                F S Aircon & Infratech focuses on providing air-conditioning and HVAC solutions for customers seeking dependable comfort and professional service.
+              </p>
+              <p>
+                Whether the requirement involves a new installation, an existing system, or ongoing maintenance, the goal is to make the process straightforward and convenient.
+              </p>
+              <p class="text-sm text-slate-500 pt-2 border-l-2 border-brand-blue pl-4">
+                We coordinate site assessments, clean installations, and regular servicing for residential premises, offices, and retail establishments.
+              </p>
+            </div>
+            <div class="pt-2">
+              <a href="#services" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy transition-colors group">
+                Learn More
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Editorial Technical Photo Side -->
+          <div class="lg:col-span-6">
+            <div class="relative">
+              <div class="overflow-hidden rounded-md border border-slate-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Modern commercial ventilation and air management architecture" 
+                  class="w-full h-[320px] sm:h-[420px] object-cover"
+                  loading="lazy"
+                >
+              </div>
+              <div class="mt-3 flex items-center justify-between text-xs text-slate-500 border-t border-slate-100 pt-2">
+                <span>Facility Airflow & Temperature Management</span>
+                <span class="font-mono text-brand-blue">REF / AC-INFRATECH</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 5. SERVICES SECTION                                            -->
+    <!-- ============================================================== -->
+    <section id="services" class="py-16 lg:py-24 bg-brand-offWhite border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12 sm:mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+            What We Do
+          </p>
+          <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+            Air Conditioning<br>& HVAC Services.
+          </h2>
+          <p class="mt-4 text-base text-brand-text">
+            Straightforward cooling and ventilation solutions tailored to site needs, from installation to periodic system upkeep.
+          </p>
+        </div>
+
+        <!-- Professional Service Grid (Not generic identical cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- SERVICE 01 -->
+          <div class="bg-white p-6 sm:p-8 rounded border border-slate-200 hover:border-brand-blue/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="font-mono text-xs font-bold text-brand-blue">01</span>
+                <!-- AC Installation Line Icon -->
+                <svg class="w-7 h-7 stroke-brand-blue stroke-[1.5] fill-none" viewBox="0 0 24 24">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/>
+                  <line x1="6" y1="12" x2="18" y2="12"/>
+                  <line x1="6" y1="15" x2="14" y2="15"/>
+                  <circle cx="18" cy="9" r="1" fill="#0879B9"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-darkNavy uppercase mb-2">
+                Air Conditioning Installation
+              </h3>
+              <p class="text-sm text-brand-text mb-5 leading-relaxed">
+                Professional installation solutions for air-conditioning requirements.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6 border-t border-slate-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Split AC installation
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  System positioning
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Installation coordination
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Initial operational checks
+                </li>
+              </ul>
+            </div>
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about AC Installation.')" 
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy pt-3 border-t border-slate-100 w-full"
+            >
+              Enquire Now &rarr;
+            </button>
+          </div>
+
+          <!-- SERVICE 02 -->
+          <div class="bg-white p-6 sm:p-8 rounded border border-slate-200 hover:border-brand-blue/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="font-mono text-xs font-bold text-brand-blue">02</span>
+                <!-- AC Service / Airflow Icon -->
+                <svg class="w-7 h-7 stroke-brand-blue stroke-[1.5] fill-none" viewBox="0 0 24 24">
+                  <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
+                  <path d="M12 12v9"/>
+                  <path d="m8 17 4 4 4-4"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-darkNavy uppercase mb-2">
+                Air Conditioning Service
+              </h3>
+              <p class="text-sm text-brand-text mb-5 leading-relaxed">
+                Maintenance and servicing support for existing air-conditioning systems.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6 border-t border-slate-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  General servicing
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Filter cleaning
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Performance inspection
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Basic system checks
+                </li>
+              </ul>
+            </div>
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about Air Conditioning Service.')" 
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy pt-3 border-t border-slate-100 w-full"
+            >
+              Enquire Now &rarr;
+            </button>
+          </div>
+
+          <!-- SERVICE 03 -->
+          <div class="bg-white p-6 sm:p-8 rounded border border-slate-200 hover:border-brand-blue/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="font-mono text-xs font-bold text-brand-blue">03</span>
+                <!-- HVAC Solutions Icon -->
+                <svg class="w-7 h-7 stroke-brand-blue stroke-[1.5] fill-none" viewBox="0 0 24 24">
+                  <path d="M12 2v20M2 12h20"/>
+                  <circle cx="12" cy="12" r="7"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-darkNavy uppercase mb-2">
+                HVAC Solutions
+              </h3>
+              <p class="text-sm text-brand-text mb-5 leading-relaxed">
+                Air-conditioning and ventilation solutions for suitable residential and commercial requirements.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6 border-t border-slate-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  HVAC requirement assessment
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Equipment selection support
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  System planning
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Installation coordination
+                </li>
+              </ul>
+            </div>
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about HVAC Solutions.')" 
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy pt-3 border-t border-slate-100 w-full"
+            >
+              Enquire Now &rarr;
+            </button>
+          </div>
+
+          <!-- SERVICE 04 -->
+          <div class="bg-white p-6 sm:p-8 rounded border border-slate-200 hover:border-brand-blue/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="font-mono text-xs font-bold text-brand-blue">04</span>
+                <!-- Troubleshooting / Wrench Icon -->
+                <svg class="w-7 h-7 stroke-brand-blue stroke-[1.5] fill-none" viewBox="0 0 24 24">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-darkNavy uppercase mb-2">
+                Repair & Troubleshooting
+              </h3>
+              <p class="text-sm text-brand-text mb-5 leading-relaxed">
+                Assistance with diagnosing air-conditioning issues and identifying appropriate corrective action.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6 border-t border-slate-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  System inspection
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Cooling-related complaints
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Fault identification
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Repair coordination
+                </li>
+              </ul>
+            </div>
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about Repair & Troubleshooting.')" 
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy pt-3 border-t border-slate-100 w-full"
+            >
+              Enquire Now &rarr;
+            </button>
+          </div>
+
+          <!-- SERVICE 05 -->
+          <div class="bg-white p-6 sm:p-8 rounded border border-slate-200 hover:border-brand-blue/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="font-mono text-xs font-bold text-brand-blue">05</span>
+                <!-- Preventive Maintenance / Shield Check Icon -->
+                <svg class="w-7 h-7 stroke-brand-blue stroke-[1.5] fill-none" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-darkNavy uppercase mb-2">
+                Preventive Maintenance
+              </h3>
+              <p class="text-sm text-brand-text mb-5 leading-relaxed">
+                Planned maintenance support intended to help keep equipment in suitable operating condition.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6 border-t border-slate-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Periodic inspection
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Cleaning schedules
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Performance checks
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Maintenance recommendations
+                </li>
+              </ul>
+            </div>
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about Preventive Maintenance.')" 
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy pt-3 border-t border-slate-100 w-full"
+            >
+              Enquire Now &rarr;
+            </button>
+          </div>
+
+          <!-- SERVICE 06 -->
+          <div class="bg-white p-6 sm:p-8 rounded border border-slate-200 hover:border-brand-blue/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="font-mono text-xs font-bold text-brand-blue">06</span>
+                <!-- Commercial Building Icon -->
+                <svg class="w-7 h-7 stroke-brand-blue stroke-[1.5] fill-none" viewBox="0 0 24 24">
+                  <rect x="4" y="2" width="16" height="20" rx="1"/>
+                  <path d="M9 22v-4h6v4"/>
+                  <line x1="8" y1="6" x2="10" y2="6"/>
+                  <line x1="14" y1="6" x2="16" y2="6"/>
+                  <line x1="8" y1="10" x2="10" y2="10"/>
+                  <line x1="14" y1="10" x2="16" y2="10"/>
+                  <line x1="8" y1="14" x2="10" y2="14"/>
+                  <line x1="14" y1="14" x2="16" y2="14"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-brand-darkNavy uppercase mb-2">
+                Commercial Air Conditioning
+              </h3>
+              <p class="text-sm text-brand-text mb-5 leading-relaxed">
+                Solutions for offices, shops, and other suitable commercial environments.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-6 border-t border-slate-100 pt-4">
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Commercial cooling requirements
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Equipment planning
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Installation coordination
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1 h-1 rounded-full bg-brand-blue"></span>
+                  Ongoing service requirements
+                </li>
+              </ul>
+            </div>
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about Commercial Air Conditioning.')" 
+              class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue hover:text-brand-deepNavy pt-3 border-t border-slate-100 w-full"
+            >
+              Enquire Now &rarr;
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 6. WHY CHOOSE US                                              -->
+    <!-- ============================================================== -->
+    <section class="py-16 lg:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12 sm:mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+            Why F S Aircon & Infratech
+          </p>
+          <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+            A Practical Approach<br>To Cooling Solutions.
+          </h2>
+        </div>
+
+        <!-- Four structured editorial blocks -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="border-t-2 border-brand-blue pt-6">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center text-brand-blue bg-brand-lightBlue rounded">
+              <svg class="w-5 h-5 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m10 15 5-3-5-3v6z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-mono font-bold text-slate-400">01</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-brand-darkNavy mt-1 mb-2">
+              Requirement-Focused
+            </h3>
+            <p class="text-sm text-brand-text leading-relaxed">
+              Understand the customer's cooling requirements before suggesting an appropriate solution.
+            </p>
+          </div>
+
+          <div class="border-t-2 border-brand-blue pt-6">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center text-brand-blue bg-brand-lightBlue rounded">
+              <svg class="w-5 h-5 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-mono font-bold text-slate-400">02</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-brand-darkNavy mt-1 mb-2">
+              Clear Communication
+            </h3>
+            <p class="text-sm text-brand-text leading-relaxed">
+              Make service requirements, recommendations, and next steps easy to understand.
+            </p>
+          </div>
+
+          <div class="border-t-2 border-brand-blue pt-6">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center text-brand-blue bg-brand-lightBlue rounded">
+              <svg class="w-5 h-5 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <span class="text-xs font-mono font-bold text-slate-400">03</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-brand-darkNavy mt-1 mb-2">
+              Professional Approach
+            </h3>
+            <p class="text-sm text-brand-text leading-relaxed">
+              Present a structured approach to installation, servicing, and maintenance.
+            </p>
+          </div>
+
+          <div class="border-t-2 border-brand-blue pt-6">
+            <div class="w-10 h-10 mb-4 flex items-center justify-center text-brand-blue bg-brand-lightBlue rounded">
+              <svg class="w-5 h-5 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <span class="text-xs font-mono font-bold text-slate-400">04</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-brand-darkNavy mt-1 mb-2">
+              Customer Convenience
+            </h3>
+            <p class="text-sm text-brand-text leading-relaxed">
+              Make it straightforward to contact the team, discuss requirements, and request a quotation.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 7. HOW IT WORKS (TIMELINE)                                     -->
+    <!-- ============================================================== -->
+    <section class="py-16 lg:py-24 bg-brand-offWhite border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-2xl mb-12 sm:mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+            Clear Workflow
+          </p>
+          <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+            From Enquiry<br>To Comfort.
+          </h2>
+        </div>
+
+        <!-- Steps Timeline (Desktop horizontal, Mobile vertical) -->
+        <div class="relative">
+          
+          <!-- Desktop horizontal connecting line -->
+          <div class="hidden lg:block absolute top-7 left-8 right-8 h-0.5 bg-slate-200 -z-0"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            
+            <!-- Step 1 -->
+            <div class="flex lg:flex-col items-start gap-4 lg:gap-0">
+              <div class="w-14 h-14 rounded bg-brand-deepNavy text-white font-mono font-bold flex items-center justify-center shrink-0 lg:mb-6 shadow-sm">
+                01
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-brand-darkNavy uppercase mb-1">
+                  Discuss Your Requirement
+                </h3>
+                <p class="text-sm text-brand-text leading-relaxed">
+                  Contact the team and explain your air-conditioning needs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex lg:flex-col items-start gap-4 lg:gap-0">
+              <div class="w-14 h-14 rounded bg-brand-deepNavy text-white font-mono font-bold flex items-center justify-center shrink-0 lg:mb-6 shadow-sm">
+                02
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-brand-darkNavy uppercase mb-1">
+                  Assess The Requirement
+                </h3>
+                <p class="text-sm text-brand-text leading-relaxed">
+                  Review the space, existing equipment, and proposed scope of work as applicable.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex lg:flex-col items-start gap-4 lg:gap-0">
+              <div class="w-14 h-14 rounded bg-brand-deepNavy text-white font-mono font-bold flex items-center justify-center shrink-0 lg:mb-6 shadow-sm">
+                03
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-brand-darkNavy uppercase mb-1">
+                  Propose A Solution
+                </h3>
+                <p class="text-sm text-brand-text leading-relaxed">
+                  Discuss the recommended work, equipment requirements, and quotation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex lg:flex-col items-start gap-4 lg:gap-0">
+              <div class="w-14 h-14 rounded bg-brand-blue text-white font-mono font-bold flex items-center justify-center shrink-0 lg:mb-6 shadow-sm">
+                04
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-brand-darkNavy uppercase mb-1">
+                  Service Or Installation
+                </h3>
+                <p class="text-sm text-brand-text leading-relaxed">
+                  Proceed with the agreed work and applicable operational checks.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 8. APPLICATIONS / CUSTOMER TYPES                              -->
+    <!-- ============================================================== -->
+    <section id="applications" class="py-16 lg:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-12 sm:mb-16">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+            Coverage Scope
+          </p>
+          <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+            Solutions For Your Space.
+          </h2>
+          <p class="mt-4 text-base text-brand-text">
+            Air-conditioning support tailored to match property layouts and heat load profiles across diverse environments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <div class="p-5 border border-slate-200 rounded hover:border-brand-blue transition-colors">
+            <span class="block text-brand-blue mb-3">
+              <svg class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </span>
+            <h3 class="text-sm font-bold text-brand-darkNavy uppercase mb-1">Residential Spaces</h3>
+            <p class="text-xs text-brand-text">Bedrooms, living spaces, and apartments requiring quiet split cooling.</p>
+          </div>
+
+          <div class="p-5 border border-slate-200 rounded hover:border-brand-blue transition-colors">
+            <span class="block text-brand-blue mb-3">
+              <svg class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </span>
+            <h3 class="text-sm font-bold text-brand-darkNavy uppercase mb-1">Commercial Offices</h3>
+            <p class="text-xs text-brand-text">Workstations, conference cabins, and continuous work zones.</p>
+          </div>
+
+          <div class="p-5 border border-slate-200 rounded hover:border-brand-blue transition-colors">
+            <span class="block text-brand-blue mb-3">
+              <svg class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </span>
+            <h3 class="text-sm font-bold text-brand-darkNavy uppercase mb-1">Retail Shops</h3>
+            <p class="text-xs text-brand-text">Showrooms and retail outlets requiring customer comfort.</p>
+          </div>
+
+          <div class="p-5 border border-slate-200 rounded hover:border-brand-blue transition-colors">
+            <span class="block text-brand-blue mb-3">
+              <svg class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </span>
+            <h3 class="text-sm font-bold text-brand-darkNavy uppercase mb-1">Small Businesses</h3>
+            <p class="text-xs text-brand-text">Clinics, studios, and agencies balancing budget and reliability.</p>
+          </div>
+
+          <div class="p-5 border border-slate-200 rounded hover:border-brand-blue transition-colors">
+            <span class="block text-brand-blue mb-3">
+              <svg class="w-6 h-6 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <rect x="4" y="2" width="16" height="20" rx="1"/>
+                <path d="M9 22v-4h6v4"/>
+              </svg>
+            </span>
+            <h3 class="text-sm font-bold text-brand-darkNavy uppercase mb-1">Commercial Properties</h3>
+            <p class="text-xs text-brand-text">Multi-room commercial spaces with planned maintenance cycles.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 9. MAINTENANCE SECTION                                         -->
+    <!-- ============================================================== -->
+    <section id="maintenance" class="py-16 lg:py-24 bg-brand-lightBlue/40 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-blue">
+            Equipment Care
+          </p>
+          <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+            Better Comfort Starts With Proper Care.
+          </h2>
+          <p class="text-base sm:text-lg text-brand-text leading-relaxed">
+            Regular servicing and appropriate maintenance can help keep air-conditioning equipment clean and operating as intended. Scope and frequency depend on your equipment type, usage hours, and site environment.
+          </p>
+          <div class="pt-4 flex justify-center">
+            <button 
+              type="button"
+              onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to ask about AC maintenance services for my space.')" 
+              class="inline-flex items-center gap-2 px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-[#076ba5] rounded transition-colors shadow-sm"
+            >
+              Ask About Maintenance
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.147-.532-1.745-.73-2.87-2.518-2.957-2.635-.088-.117-.708-.942-.708-1.797 0-.855.449-1.275.609-1.45.16-.175.348-.219.465-.219.116 0 .233.001.335.006.107.005.25.04.39.377.145.349.494 1.205.538 1.293.043.088.072.19.014.305-.058.117-.087.19-.174.292-.088.102-.185.228-.264.306-.089.088-.182.183-.078.361.104.178.463.764.994 1.238.683.609 1.26.797 1.438.885.178.088.283.073.388-.048.106-.12.449-.523.568-.702.119-.178.238-.148.397-.089.159.059 1.01.476 1.184.564.174.088.291.132.334.205.044.073.044.423-.1.828zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.658 1.444 5.168L2 22l4.98-1.306C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 10. PROJECTS / WORK GALLERY                                    -->
+    <!-- ============================================================== -->
+    <section id="projects" class="py-16 lg:py-24 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+              Our Work
+            </p>
+            <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+              HVAC Solutions<br>& Applications.
+            </h2>
+          </div>
+          <p class="mt-4 md:mt-0 text-xs text-slate-500 max-w-xs">
+            Representative field illustrations of commercial ventilation, split AC setups, and maintenance operations.
+          </p>
+        </div>
+
+        <!-- Clean Responsive Photo Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="group overflow-hidden rounded border border-slate-200">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img 
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80" 
+                alt="Split air conditioner wall unit installed in modern interior" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-4 bg-white">
+              <span class="text-[11px] font-mono font-bold text-brand-blue uppercase">Indoor Climate</span>
+              <p class="text-sm font-bold text-brand-darkNavy mt-1">Split Unit Installation</p>
+            </div>
+          </div>
+
+          <div class="group overflow-hidden rounded border border-slate-200">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img 
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" 
+                alt="Commercial mechanical airflow ducting and ventilation system" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-4 bg-white">
+              <span class="text-[11px] font-mono font-bold text-brand-blue uppercase">Ducting & Airway</span>
+              <p class="text-sm font-bold text-brand-darkNavy mt-1">Ventilation Coordination</p>
+            </div>
+          </div>
+
+          <div class="group overflow-hidden rounded border border-slate-200">
+            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+              <img 
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" 
+                alt="Technical technician measuring equipment pressure and system parameters" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-4 bg-white">
+              <span class="text-[11px] font-mono font-bold text-brand-blue uppercase">Inspection</span>
+              <p class="text-sm font-bold text-brand-darkNavy mt-1">System Diagnostic & Testing</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 11. FREQUENTLY ASKED QUESTIONS                                 -->
+    <!-- ============================================================== -->
+    <section class="py-16 lg:py-24 bg-brand-offWhite border-b border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">
+            Questions Answered
+          </p>
+          <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+            Frequently Asked Questions.
+          </h2>
+        </div>
+
+        <div class="space-y-3" id="faq-accordion">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item bg-white border border-slate-200 rounded">
+            <button 
+              type="button" 
+              class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between text-brand-darkNavy font-semibold text-sm sm:text-base focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>1. Which air-conditioning services do you offer?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-blue shrink-0 ml-3 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-content px-5">
+              <p class="pb-4 text-sm text-brand-text leading-relaxed border-t border-slate-100 pt-3">
+                We handle air-conditioning installation, routine servicing, basic troubleshooting and fault repairs, planned maintenance, and commercial cooling assessments for offices and retail premises.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item bg-white border border-slate-200 rounded">
+            <button 
+              type="button" 
+              class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between text-brand-darkNavy font-semibold text-sm sm:text-base focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>2. Can I request an AC installation quotation?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-blue shrink-0 ml-3 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-content px-5">
+              <p class="pb-4 text-sm text-brand-text leading-relaxed border-t border-slate-100 pt-3">
+                Yes. You can contact us through the online form or directly on WhatsApp with your room dimensions, location, and preferred system type to receive an estimated quotation.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item bg-white border border-slate-200 rounded">
+            <button 
+              type="button" 
+              class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between text-brand-darkNavy font-semibold text-sm sm:text-base focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>3. Do you provide AC servicing and maintenance?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-blue shrink-0 ml-3 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-content px-5">
+              <p class="pb-4 text-sm text-brand-text leading-relaxed border-t border-slate-100 pt-3">
+                Yes, we support both one-time maintenance visits (filter cleaning, drain line clearing, coil check) and periodic maintenance plans tailored to residential or commercial use.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item bg-white border border-slate-200 rounded">
+            <button 
+              type="button" 
+              class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between text-brand-darkNavy font-semibold text-sm sm:text-base focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>4. Can I enquire about commercial HVAC requirements?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-blue shrink-0 ml-3 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-content px-5">
+              <p class="pb-4 text-sm text-brand-text leading-relaxed border-t border-slate-100 pt-3">
+                Certainly. We review requirements for shops, commercial offices, and multi-unit premises to assist with equipment layout and ongoing maintenance coordination.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item bg-white border border-slate-200 rounded">
+            <button 
+              type="button" 
+              class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between text-brand-darkNavy font-semibold text-sm sm:text-base focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>5. How can I discuss my requirements with your team?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-blue shrink-0 ml-3 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-content px-5">
+              <p class="pb-4 text-sm text-brand-text leading-relaxed border-t border-slate-100 pt-3">
+                You can reach us through WhatsApp, by phone, or by submitting your project details via the enquiry form below. We will follow up to understand your exact site conditions.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item bg-white border border-slate-200 rounded">
+            <button 
+              type="button" 
+              class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between text-brand-darkNavy font-semibold text-sm sm:text-base focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>6. How do I request a quotation?</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-blue shrink-0 ml-3 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-content px-5">
+              <p class="pb-4 text-sm text-brand-text leading-relaxed border-t border-slate-100 pt-3">
+                Simply share your location, the number of units or rooms, and the service required (new install, repair, or regular service). We will provide clear pricing and next steps.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 12. CONTACT SECTION                                            -->
+    <!-- ============================================================== -->
+    <section id="contact" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Left: Context & Direct Reach -->
+          <div class="lg:col-span-5 space-y-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-blue">
+              Contact Us
+            </p>
+            <h2 class="section-title font-display font-bold text-brand-darkNavy tracking-tight uppercase">
+              Let's Find The Right Cooling Solution.
+            </h2>
+            <p class="text-base text-brand-text leading-relaxed">
+              Tell us about your air-conditioning or HVAC requirements, and get in touch to discuss the next steps.
+            </p>
+
+            <div class="pt-4 space-y-4 text-sm text-slate-700">
+              
+              <div class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded bg-brand-lightBlue flex items-center justify-center text-brand-blue shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Phone Contact</span>
+                  <!-- Configurable Phone Placeholder -->
+                  <span class="font-medium text-brand-darkNavy">+91 [Phone Number to be updated]</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded bg-brand-lightBlue flex items-center justify-center text-brand-blue shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Email Address</span>
+                  <!-- Configurable Email Placeholder -->
+                  <span class="font-medium text-brand-darkNavy">contact@[domain-to-be-updated].com</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="w-8 h-8 rounded bg-brand-lightBlue flex items-center justify-center text-brand-blue shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Office / Workshop Location</span>
+                  <!-- Configurable Address Placeholder -->
+                  <span class="font-medium text-brand-darkNavy">[Business Address to be confirmed], India</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Direct WhatsApp Quick Link button beside form -->
+            <div class="pt-4">
+              <button 
+                type="button"
+                onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to discuss an HVAC / AC requirement.')" 
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-wider text-[#128C7E] bg-[#EAF8F5] border border-[#B9EADF] rounded hover:bg-[#d8f3ed] transition-colors"
+              >
+                <!-- WhatsApp SVG icon -->
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.147-.532-1.745-.73-2.87-2.518-2.957-2.635-.088-.117-.708-.942-.708-1.797 0-.855.449-1.275.609-1.45.16-.175.348-.219.465-.219.116 0 .233.001.335.006.107.005.25.04.39.377.145.349.494 1.205.538 1.293.043.088.072.19.014.305-.058.117-.087.19-.174.292-.088.102-.185.228-.264.306-.089.088-.182.183-.078.361.104.178.463.764.994 1.238.683.609 1.26.797 1.438.885.178.088.283.073.388-.048.106-.12.449-.523.568-.702.119-.178.238-.148.397-.089.159.059 1.01.476 1.184.564.174.088.291.132.334.205.044.073.044.423-.1.828zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.658 1.444 5.168L2 22l4.98-1.306C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+                </svg>
+                Connect directly on WhatsApp
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Contact Right: Form with Validation & WhatsApp Prefill -->
+          <div class="lg:col-span-7">
+            <div class="bg-brand-offWhite p-6 sm:p-8 rounded border border-slate-200">
+              
+              <form id="enquiry-form" class="space-y-4" novalidate onsubmit="handleFormSubmit(event)">
+                
+                <div>
+                  <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-brand-darkNavy mb-1">
+                    Your Name <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    required 
+                    placeholder="e.g. Ramesh Patel" 
+                    class="w-full px-3.5 py-2.5 text-sm rounded border border-slate-300 bg-white text-slate-800 focus:border-brand-blue transition-colors"
+                  >
+                  <p id="error-name" class="hidden text-xs text-rose-600 mt-1">Please provide your name.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-brand-darkNavy mb-1">
+                      Phone Number <span class="text-rose-500">*</span>
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="contact-phone" 
+                      name="phone" 
+                      required 
+                      placeholder="e.g. 9876543210" 
+                      class="w-full px-3.5 py-2.5 text-sm rounded border border-slate-300 bg-white text-slate-800 focus:border-brand-blue transition-colors"
+                    >
+                    <p id="error-phone" class="hidden text-xs text-rose-600 mt-1">Please provide a valid phone number.</p>
+                  </div>
+
+                  <div>
+                    <label for="contact-service" class="block text-xs font-bold uppercase tracking-wider text-brand-darkNavy mb-1">
+                      Service Required <span class="text-rose-500">*</span>
+                    </label>
+                    <select 
+                      id="contact-service" 
+                      name="service" 
+                      required
+                      class="w-full px-3.5 py-2.5 text-sm rounded border border-slate-300 bg-white text-slate-800 focus:border-brand-blue transition-colors"
+                    >
+                      <option value="">Select a service...</option>
+                      <option value="AC Installation">Air Conditioning Installation</option>
+                      <option value="AC Servicing & Cleaning">Air Conditioning Service</option>
+                      <option value="HVAC Planning & Ventilation">HVAC Solutions</option>
+                      <option value="Repair & Fault Diagnosis">Repair & Troubleshooting</option>
+                      <option value="Preventive Maintenance">Preventive Maintenance</option>
+                      <option value="Commercial Cooling">Commercial Air Conditioning</option>
+                      <option value="General Enquiry">Other Requirement</option>
+                    </select>
+                    <p id="error-service" class="hidden text-xs text-rose-600 mt-1">Please select the service required.</p>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-location" class="block text-xs font-bold uppercase tracking-wider text-brand-darkNavy mb-1">
+                    Location / Area <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-location" 
+                    name="location" 
+                    required 
+                    placeholder="e.g. Alkapuri, Vadodara" 
+                    class="w-full px-3.5 py-2.5 text-sm rounded border border-slate-300 bg-white text-slate-800 focus:border-brand-blue transition-colors"
+                  >
+                  <p id="error-location" class="hidden text-xs text-rose-600 mt-1">Please specify your site location.</p>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-brand-darkNavy mb-1">
+                    Requirement Details (Optional)
+                  </label>
+                  <textarea 
+                    id="contact-message" 
+                    name="message" 
+                    rows="3" 
+                    placeholder="Briefly describe the number of units, room size, or issue..." 
+                    class="w-full px-3.5 py-2.5 text-sm rounded border border-slate-300 bg-white text-slate-800 focus:border-brand-blue transition-colors resize-y"
+                  ></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button 
+                    type="submit" 
+                    class="w-full py-3.5 px-6 text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-[#076ba5] rounded transition-colors shadow-sm text-center"
+                  >
+                    Send Enquiry (Opens WhatsApp)
+                  </button>
+                  <p class="text-[11px] text-slate-500 text-center mt-2.5">
+                    Your details will be formatted into an instant WhatsApp enquiry for prompt response.
+                  </p>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 13. FINAL CTA SECTION                                          -->
+    <!-- ============================================================== -->
+    <section class="py-16 lg:py-20 bg-brand-deepNavy text-white relative overflow-hidden">
+      <!-- Restrained architectural background grid lines -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold uppercase tracking-tight text-white">
+          Need Help With Your Air Conditioning?
+        </h2>
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Let's discuss your requirements and find a suitable way forward.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-brand-blue hover:bg-[#076ba5] rounded transition-colors shadow-sm">
+            Get a Quote
+          </a>
+          <button 
+            type="button"
+            onclick="openWhatsApp('Hello F S Aircon & Infratech, I need assistance with an air-conditioning requirement.')" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded transition-colors"
+          >
+            <!-- WhatsApp SVG icon -->
+            <svg class="w-4 h-4 fill-current text-[#25D366]" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.147-.532-1.745-.73-2.87-2.518-2.957-2.635-.088-.117-.708-.942-.708-1.797 0-.855.449-1.275.609-1.45.16-.175.348-.219.465-.219.116 0 .233.001.335.006.107.005.25.04.39.377.145.349.494 1.205.538 1.293.043.088.072.19.014.305-.058.117-.087.19-.174.292-.088.102-.185.228-.264.306-.089.088-.182.183-.078.361.104.178.463.764.994 1.238.683.609 1.26.797 1.438.885.178.088.283.073.388-.048.106-.12.449-.523.568-.702.119-.178.238-.148.397-.089.159.059 1.01.476 1.184.564.174.088.291.132.334.205.044.073.044.423-.1.828zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.658 1.444 5.168L2 22l4.98-1.306C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+            </svg>
+            Chat on WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 14. FOOTER                                                     -->
+  <!-- ============================================================== -->
+  <footer class="bg-brand-darkNavy text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="h-12 w-auto max-w-[200px] flex items-center bg-white p-1.5 rounded">
+            <img 
+              src="images/97272.jpg" 
+              alt="F S Aircon & Infratech" 
+              class="h-full w-auto object-contain"
+              onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'font-display font-extrabold text-brand-darkNavy text-sm tracking-tight\'>F S AIRCON & INFRATECH</span>';"
+            >
+          </div>
+          <p class="text-sm font-semibold text-white tracking-wide">
+            F S Aircon & Infratech
+          </p>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Air-conditioning and HVAC solutions for residential and commercial requirements. Installation, servicing, maintenance, and technical consultation.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="lg:col-span-3 space-y-3">
+          <p class="text-xs font-bold uppercase tracking-wider text-white">
+            Navigation
+          </p>
+          <ul class="text-xs space-y-2 text-slate-400">
+            <li><a href="#home" class="hover:text-brand-blue transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-brand-blue transition-colors">About</a></li>
+            <li><a href="#services" class="hover:text-brand-blue transition-colors">Services</a></li>
+            <li><a href="#applications" class="hover:text-brand-blue transition-colors">Applications</a></li>
+            <li><a href="#maintenance" class="hover:text-brand-blue transition-colors">Maintenance</a></li>
+            <li><a href="#projects" class="hover:text-brand-blue transition-colors">Our Work</a></li>
+            <li><a href="#contact" class="hover:text-brand-blue transition-colors">Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information Placeholders -->
+        <div class="lg:col-span-4 space-y-3">
+          <p class="text-xs font-bold uppercase tracking-wider text-white">
+            Contact Details
+          </p>
+          <div class="text-xs text-slate-400 space-y-2">
+            <p><span class="text-slate-200 font-medium">Phone:</span> +91 [Update Business Phone]</p>
+            <p><span class="text-slate-200 font-medium">Email:</span> contact@[domain-placeholder].com</p>
+            <p><span class="text-slate-200 font-medium">Workshop / Office:</span> [Site Address to be updated], India</p>
+            <div class="pt-2">
+              <button 
+                type="button" 
+                onclick="openWhatsApp('Hello F S Aircon & Infratech, I am reaching out from your website.')" 
+                class="inline-flex items-center gap-1.5 text-xs text-[#25D366] hover:underline"
+              >
+                <span>&rarr; Instant WhatsApp Messaging</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>&copy; <span id="current-year">2026</span> F S Aircon & Infratech. All rights reserved.</p>
+        <p class="text-[11px]">Professional HVAC & Air Conditioning Services</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- 15. FLOATING WHATSAPP BUTTON                                   -->
+  <!-- ============================================================== -->
+  <aside aria-label="WhatsApp Fast Contact" class="fixed bottom-5 right-5 z-50">
+    <div class="relative group flex items-center justify-end">
+      
+      <!-- Desktop Tooltip -->
+      <span class="hidden md:block absolute right-14 mr-2 px-3 py-1.5 text-xs font-semibold text-brand-darkNavy bg-white border border-slate-200 rounded shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        Chat with us
+      </span>
+
+      <!-- Floating Button Target -->
+      <button 
+        type="button"
+        onclick="openWhatsApp('Hello F S Aircon & Infratech, I would like to enquire about your air-conditioning and HVAC services.')" 
+        aria-label="Chat with F S Aircon & Infratech on WhatsApp" 
+        class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white flex items-center justify-center shadow-lg transition-transform duration-150 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+      >
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.073-2.147-.532-1.745-.73-2.87-2.518-2.957-2.635-.088-.117-.708-.942-.708-1.797 0-.855.449-1.275.609-1.45.16-.175.348-.219.465-.219.116 0 .233.001.335.006.107.005.25.04.39.377.145.349.494 1.205.538 1.293.043.088.072.19.014.305-.058.117-.087.19-.174.292-.088.102-.185.228-.264.306-.089.088-.182.183-.078.361.104.178.463.764.994 1.238.683.609 1.26.797 1.438.885.178.088.283.073.388-.048.106-.12.449-.523.568-.702.119-.178.238-.148.397-.089.159.059 1.01.476 1.184.564.174.088.291.132.334.205.044.073.044.423-.1.828zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.658 1.444 5.168L2 22l4.98-1.306C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================== -->
+  <!-- 16. JAVASCRIPT LOGIC & WHATSAPP CONFIGURATION                  -->
+  <!-- ============================================================== -->
+  <script>
+    /* =============================================================
+       WHATSAPP NUMBER CONFIGURATION
+       Replace 'YOURNUMBER' with the verified 10-digit phone number.
+       Example: '919876543210' (Country code 91 + number)
+       ============================================================= */
+    const BUSINESS_WHATSAPP_NUMBER = "91YOURNUMBER"; 
+
+    /**
+     * Unified handler to open WhatsApp with URL-encoded messages
+     */
+    function openWhatsApp(messageText) {
+      const encodedMsg = encodeURIComponent(messageText);
+      const url = `https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodedMsg}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    /**
+     * Mobile Navigation Drawer Toggle
+     */
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMobileMenu() {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('menu-open', 'hidden');
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Close menu when a link inside is clicked
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+          toggleMobileMenu();
+        }
+      });
+    });
+
+    /**
+     * FAQ Accordion Interactive Logic
+     */
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const content = item.querySelector('.faq-content');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        // Close other accordion items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+            otherItem.querySelector('.faq-content').style.maxHeight = null;
+          }
+        });
+
+        // Toggle current item
+        if (isExpanded) {
+          item.classList.remove('active');
+          button.setAttribute('aria-expanded', 'false');
+          content.style.maxHeight = null;
+        } else {
+          item.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+
+    /**
+     * Form Validation & WhatsApp Redirection
+     */
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const nameInput = document.getElementById('contact-name');
+      const phoneInput = document.getElementById('contact-phone');
+      const serviceInput = document.getElementById('contact-service');
+      const locationInput = document.getElementById('contact-location');
+      const messageInput = document.getElementById('contact-message');
+
+      let isValid = true;
+
+      // Validate Name
+      if (!nameInput.value.trim()) {
+        document.getElementById('error-name').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('error-name').classList.add('hidden');
+      }
+
+      // Validate Phone
+      const phoneVal = phoneInput.value.trim();
+      const phoneRegex = /^[0-9+\s-]{8,15}$/;
+      if (!phoneVal || !phoneRegex.test(phoneVal)) {
+        document.getElementById('error-phone').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('error-phone').classList.add('hidden');
+      }
+
+      // Validate Service
+      if (!serviceInput.value) {
+        document.getElementById('error-service').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('error-service').classList.add('hidden');
+      }
+
+      // Validate Location
+      if (!locationInput.value.trim()) {
+        document.getElementById('error-location').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('error-location').classList.add('hidden');
+      }
+
+      if (!isValid) return;
+
+      // Assemble plain structured WhatsApp message
+      const text = 
+`Hello F S Aircon & Infratech,
+
+I would like to request an enquiry:
+
+• Name: ${nameInput.value.trim()}
+• Phone: ${phoneInput.value.trim()}
+• Service: ${serviceInput.value}
+• Location: ${locationInput.value.trim()}
+• Details: ${messageInput.value.trim() || 'N/A'}`;
+
+      openWhatsApp(text);
+    }
+
+    /**
+     * Dynamic Copyright Year
+     */
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    /**
+     * Header compact styling on scroll
+     */
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-sm');
+      } else {
+        header.classList.remove('shadow-sm');
+      }
+    });
+  </script>
+
+</body>
+</html>
