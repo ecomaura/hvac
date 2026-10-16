@@ -87,6 +87,8 @@ footer ul{list-style:none;padding:0;margin:0}footer li{padding:4px 0;font-size:.
 .fab:hover{transform:scale(1.07)}main{padding-bottom:8px}
 .gal{display:grid;gap:10px}.gal .main{aspect-ratio:4/3;background:var(--grey);border:1px solid var(--line);border-radius:var(--r)}.gal .main img{width:100%;height:100%;object-fit:contain;padding:14px}
 .thumbs{display:flex;gap:8px;overflow-x:auto}.thumbs button{flex:0 0 72px;height:56px;border:1px solid var(--line);background:#fff;padding:2px;border-radius:3px;cursor:pointer}.thumbs button[aria-pressed=true]{border-color:var(--blue);border-width:2px}.thumbs img{width:100%;height:100%;object-fit:contain}
+.atabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.ad{margin-bottom:10px}.ad summary{padding:14px 16px;font-weight:600;cursor:pointer;color:var(--navy)}
+.af{margin-bottom:12px}.af .btn{margin-top:6px}.ag{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
 .rev{animation:in .4s both}@keyframes in{from{opacity:0;transform:translateY(8px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -113,17 +115,17 @@ const CONFIG={
   address:"Gr. Floor, Shop No. 3, Anwar Compound, Sainik Nagar, Almas Colony Road, Mumbra Kausa, Thane, Maharashtra – 400612, India",
   img:"images/products/"             // product image folder
 };
-const CLIENTS=[
+let CLIENTS=[
   // ["Client name","filename in images/clients/"], e.g. ["ABC Industries","abc.png"],
 ];
 const clientLogos=()=>CLIENTS.length
-  ? CLIENTS.map(([n,f])=>`<div><img src="images/clients/${f}" alt="${n}" loading="lazy" style="max-height:60px;max-width:80%;object-fit:contain"></div>`).join("")
+  ? CLIENTS.map(([n,f])=>`<div><img src="${/^https?:/.test(f)?f:'images/clients/'+f}" alt="${n}" loading="lazy" style="max-height:60px;max-width:80%;object-fit:contain"></div>`).join("")
   : Array(8).fill('<div>Client logo</div>').join("");
 const wa=msg=>`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hello FS Aircon & Infratech, "+msg)}`;
 const waBtn=(msg,label="Enquire on WhatsApp",cls="wa sm")=>`<a class="btn ${cls}" href="${wa(msg)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 
 /* ===== 4. ROUTES & DATA ===== */
-const P=[
+let P=[
 {s:"symphony-air-coolers",n:"Symphony Air Coolers",f:"symphony-cooler.jpg",d:"Commercial and industrial air coolers for large, open or semi-open spaces.",
  i:"Symphony coolers use evaporative technology and are widely used where spot or area cooling is needed without a full air-conditioning plant. The range we supply covers portable commercial units, industrial coolers and desert-type coolers.",
  items:[["Symphony Movicool XE 100 Commercial Cooler","Mobile commercial cooler for shops, halls and workspaces."],["Symphony Movicool XE 200 Commercial Cooler","Larger mobile unit for wider commercial areas."],["Symphony Venti-Cool 25U Industrial Cooler","Industrial cooler for factory floors and workshops."],["Symphony Movicool DD 125 Desert Cooler","Desert-type cooler for dry, hot environments."]],
@@ -161,7 +163,7 @@ const P=[
  items:[["Aerolam XLPE 9mm Aluminium Foil","Aluminium-foil faced XLPE insulation, 9 mm."],["Aerolam Air Bubble Insulation","Air bubble foil insulation sheet."]],
  apps:["Duct wrapping","Roof and wall insulation","Cold and thermal enclosures"],ref:"HVAC insulation sheets"}
 ];
-const S=[
+let S=[
 {n:"HVAC Equipment Supply",p:"air-conditioners",t:"Commercial and industrial equipment supply.",a:"Offices, shops, plants",f:"air-conditioner.jpg"},
 {n:"AC System Selection",p:"cassette-air-conditioners",t:"Help choosing ductable, cassette or VRV systems for your space.",a:"New fit-outs and upgrades",f:"cassette-ac.jpg"},
 {n:"Ducting & Duct Fabrication",p:"air-ducts",t:"GI and pre-insulated duct supply and fabrication.",a:"AC and ventilation runs",f:"ducting.jpg"},
@@ -169,7 +171,8 @@ const S=[
 {n:"HVAC Insulation Solutions",p:"insulation-sheets",t:"Foil and bubble insulation for ducts and surfaces.",a:"Duct wrapping, thermal control",f:"insulation-sheet.jpg"},
 {n:"Project-Specific Enquiries",p:null,t:"Send your requirement and we will respond with suitable options.",a:"Any HVAC project",f:"ahu.jpg"}
 ];
-const pimg=(f,alt,lz=1)=>`<img src="${CONFIG.img}${f}" alt="${alt}" width="400" height="300" ${lz?'loading="lazy"':''} onerror="this.outerHTML='<div class=ph-fallback>${alt.replace(/'/g,"")}<br>(add image: ${CONFIG.img}${f})</div>'">`;
+const imgU=f=>/^https?:/.test(f)?f:CONFIG.img+f;
+const pimg=(f,alt,lz=1)=>`<img src="${imgU(f)}" alt="${alt}" width="400" height="300" ${lz?'loading="lazy"':''} onerror="this.outerHTML='<div class=ph-fallback>${alt.replace(/'/g,"")}<br>(add image: ${imgU(f)})</div>'">`;
 const L=(h,t,c="")=>`<a ${c?`class="${c}"`:''} href="#${h}" data-link>${t}</a>`;
 const crumb=a=>`<div class="wrap crumb" aria-label="Breadcrumb">${a.map(([h,t],i)=>i<a.length-1?`<a href="#${h}" data-link>${t}</a><span>/</span>`:`<span style="margin:0" aria-current="page">${t}</span>`).join("")}</div>`;
 const pcard=p=>`<article class="card"><div class="im">${pimg(p.f,p.n)}</div><div class="b"><h3>${p.n}</h3><p>${p.d}</p><div class="row">${L("/products/"+p.s,"View Details","btn o sm")}${waBtn("I would like to enquire about "+p.ref+".")}</div></div></article>`;
@@ -212,6 +215,7 @@ contact:()=>({t:"Contact Us | FS Aircon & Infratech",d:"Contact F S Aircon & Inf
 <div><label for="rq">Project requirements *</label><textarea id="rq" rows="4" required></textarea><p class="err" id="e-rq"></p></div>
 <div class="chk"><input id="cs" type="checkbox"><label for="cs">I agree to be contacted about this enquiry. *</label></div><p class="err" id="e-cs"></p>
 <button class="btn wa" type="submit">Send via WhatsApp</button><p style="font-size:.85rem;color:#5b6b79">This opens WhatsApp with your enquiry filled in. Nothing is stored on this website.</p></form></div></section>`}),
+admin:()=>({t:"Admin | FS Aircon & Infratech",d:"Site admin.",h:`<div class="pagehead"><div class="wrap"><h1>Site admin</h1><p class="lead">Edit content, upload images to Cloudinary and publish to GitHub.</p></div></div><section class="s"><div class="wrap" id="adm"></div></section>`}),
 nf:()=>({t:"Page not found | FS Aircon & Infratech",d:"Page not found.",h:`<section class="s"><div class="wrap"><h1>Page not found</h1><p>The page you requested does not exist.</p>${L("/","Back to home","btn")} ${L("/products","Browse products","btn o")}</div></section>`})
 };
 function product(s){const p=P.find(x=>x.s===s);if(!p)return pages.nf();
@@ -232,7 +236,7 @@ function footer(){document.getElementById("footer").innerHTML=`<div class="wrap"
 <div><h3>Products</h3><ul>${P.map(p=>`<li>${L("/products/"+p.s,p.n)}</li>`).join("")}</ul></div>
 <div><h3>Company</h3><ul><li>${L("/about","About Us")}</li><li>${L("/services","Services")}</li><li>${L("/clients","Clients")}</li><li>${L("/contact","Contact Us")}</li></ul></div>
 <div><h3>Contact</h3><p style="font-size:.88rem">${CONFIG.address}</p><p style="font-size:.88rem"><a href="mailto:${CONFIG.email}">${CONFIG.email}</a><br>GSTIN: ${CONFIG.gstin}</p></div></div>
-<div class="copy">© ${new Date().getFullYear()} ${CONFIG.name}. All rights reserved.</div></div>`}
+<div class="copy">© ${new Date().getFullYear()} ${CONFIG.name}. All rights reserved. · <a href="#/admin">Admin</a></div></div>`}
 
 /* ===== 10. ROUTER (hash-based: works on any host, incl. file://) ===== */
 function route(){const path=(location.hash.replace(/^#/,"")||"/").replace(/\/+$/,"")||"/";let pg;
@@ -241,6 +245,7 @@ function route(){const path=(location.hash.replace(/^#/,"")||"/").replace(/\/+$/
  document.title=pg.t;let m=document.querySelector('meta[name=description]');m.content=pg.d;
  const main=document.getElementById("main");main.innerHTML=pg.h;main.classList.remove("rev");void main.offsetWidth;main.classList.add("rev");
  buildNav(path);closeNav();window.scrollTo(0,0);bindForm();
+ let rb=document.querySelector('meta[name=robots]');if(path==="/admin"){if(!rb){rb=document.createElement('meta');rb.name='robots';document.head.append(rb)}rb.content='noindex';adminInit()}else if(rb)rb.remove();
  document.getElementById("fab").href=wa("I would like to enquire about your HVAC products and services.")}
 function closeNav(){document.body.classList.remove("nav-open");const b=document.getElementById("burger");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Open menu")}
 document.getElementById("burger").onclick=e=>{const o=document.body.classList.toggle("nav-open");e.currentTarget.setAttribute("aria-expanded",o);e.currentTarget.setAttribute("aria-label",o?"Close menu":"Open menu")};
@@ -258,7 +263,70 @@ function bindForm(){const f=document.getElementById("cf");if(!f)return;
  const msg=`I would like to make an enquiry.\nName: ${v("n")}\nCompany: ${v("c")||"-"}\nEmail: ${v("em")}\nPhone: ${v("ph")}\nInterest: ${v("pr")}\nRequirements: ${v("rq")}`;
  window.open(wa(msg),"_blank","noopener,noreferrer")}}
 
-footer();route();
+/* ===== 11. ADMIN: content editor, Cloudinary upload, GitHub publish ===== */
+const CFG_KEYS=["name","whatsapp","email","address","gstin"];
+const snapshot=()=>({config:Object.fromEntries(CFG_KEYS.map(k=>[k,CONFIG[k]])),products:P,services:S,clients:CLIENTS});
+const draftSave=()=>localStorage.setItem("fsai_draft",JSON.stringify(snapshot()));
+function applyData(d){if(!d)return;if(d.config)CFG_KEYS.forEach(k=>{if(d.config[k]!=null)CONFIG[k]=d.config[k]});if(d.products)P=d.products;if(d.services)S=d.services;if(d.clients)CLIENTS=d.clients}
+function adminInit(){
+ const root=document.getElementById("adm"),COLL={products:()=>P,services:()=>S,clients:()=>CLIENTS};
+ let int=JSON.parse(localStorage.getItem("fsai_int")||"{}"),tab=sessionStorage.getItem("fsai_tab")||"products";
+ const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+ const msg=(t,bad)=>{const m=document.getElementById("amsg");if(m){m.textContent=t;m.style.color=bad?"#b3261e":"#1a7f45"}};
+ const val=(o,k)=>k==="apps"?(o.apps||[]).join("\n"):k==="items"?(o.items||[]).map(a=>a.join(" | ")).join("\n"):o[k];
+ const FL={products:[["n","Name"],["s","URL slug (letters, numbers, hyphens)"],["d","Short description","t"],["i","Introduction","t"],["f","Image","img"],["ref","WhatsApp enquiry phrase"],["apps","Applications (one per line)","t"],["items","Items (name | description, one per line)","t"]],
+  services:[["n","Name"],["t","Description","t"],["a","Typical use"],["p","Linked product slug (optional)"],["f","Image","img"]],clients:[["0","Client name"],["1","Logo","img"]]};
+ const blank={products:()=>({s:"new-category-"+(Date.now()%10000),n:"New category",f:"",d:"",i:"",items:[],apps:[],ref:"new products"}),services:()=>({n:"New service",t:"",a:"",p:"",f:""}),clients:()=>["New client",""]};
+ const inp=(c,k,l,v,type="text",t)=>`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-k="${k}">${esc(v)}</textarea>`:`<input type="${type}" data-c="${c}" data-k="${k}" value="${esc(v)}" autocomplete="off">`}</div>`;
+ const field=(c,i,o,[k,l,t])=>t==="img"?`<div class="af"><label>${l}</label><input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}" placeholder="Image URL or file name">${(()=>{const u=val(o,k);return u&&/^https?:/.test(u)?`<img src="${esc(u)}" alt="" style="max-height:70px;margin-top:6px">`:""})()}<label class="btn o sm">Upload to Cloudinary<input type="file" accept="image/*" hidden data-up data-c="${c}" data-i="${i}" data-k="${k}"></label></div>`
+  :`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-i="${i}" data-k="${k}">${esc(val(o,k))}</textarea>`:`<input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}">`}</div>`;
+ function set(c,i,k,v){
+  if(c==="int"){int[k]=v;localStorage.setItem("fsai_int",JSON.stringify(int));return}
+  if(c==="config")CONFIG[k]=v;else{const o=COLL[c]()[+i];
+   if(k==="apps")o.apps=v.split("\n").map(x=>x.trim()).filter(Boolean);
+   else if(k==="items")o.items=v.split("\n").filter(x=>x.trim()).map(x=>{const[a,...b]=x.split("|");return[a.trim(),b.join("|").trim()]});
+   else o[k]=v}
+  draftSave()}
+ function draw(){
+  const T=[["products","Products"],["services","Services"],["clients","Clients"],["settings","Settings"],["publish","Publish"]];
+  let h=`<div class="atabs">${T.map(([t,l])=>`<button class="btn sm ${t===tab?"":"o"}" data-act="tab" data-t="${t}">${l}</button>`).join("")}</div><p id="amsg" role="status"></p>`;
+  if(COLL[tab]){h+=COLL[tab]().map((o,i)=>`<details class="card ad"><summary>${esc(o.n||o[0]||"Untitled")}</summary><div class="b">${FL[tab].map(f=>field(tab,i,o,f)).join("")}<div class="row"><button class="btn o sm" data-act="up" data-c="${tab}" data-i="${i}">Move up</button><button class="btn o sm" data-act="down" data-c="${tab}" data-i="${i}">Move down</button><button class="btn sm" style="background:#b3261e;border-color:#b3261e" data-act="del" data-c="${tab}" data-i="${i}">Remove</button></div></div></details>`).join("")+`<button class="btn" data-act="add" data-c="${tab}">Add ${tab.slice(0,-1)}</button>`}
+  else if(tab==="settings"){h+=`<h2>Business details</h2><div class="ag">${CFG_KEYS.map(k=>inp("config",k,k==="whatsapp"?"WhatsApp number (country code, no +)":k[0].toUpperCase()+k.slice(1),CONFIG[k])).join("")}</div>
+   <h2>Cloudinary (unsigned upload)</h2><div class="ag">${inp("int","cloud","Cloud name",int.cloud)}${inp("int","preset","Unsigned upload preset",int.preset)}</div>
+   <h2>GitHub</h2><div class="ag">${inp("int","owner","Owner",int.owner)}${inp("int","repo","Repository",int.repo)}${inp("int","branch","Branch (default main)",int.branch)}${inp("int","path","Content file path (default content.json)",int.path)}${inp("int","token","Personal access token",int.token,"password")}</div>
+   <p class="note">Cloudinary and GitHub settings, including the token, are stored only in this browser. Use a fine-grained token limited to this repository with Contents read and write access.</p>`}
+  else{h+=`<h2>Publish</h2><p>Changes save as a draft in this browser and show here immediately. Publishing commits <code>${esc(int.path||"content.json")}</code> to GitHub; your host then serves it to everyone.</p><div class="row"><button class="btn wa" data-act="pub">Publish to GitHub</button><button class="btn o" data-act="export">Download content.json</button><button class="btn o" data-act="reset">Discard draft</button></div>`}
+  root.innerHTML=h}
+ async function upload(file){if(!int.cloud||!int.preset)throw Error("Add the Cloudinary cloud name and upload preset in Settings.");
+  const fd=new FormData();fd.append("file",file);fd.append("upload_preset",int.preset);
+  const r=await fetch(`https://api.cloudinary.com/v1_1/${int.cloud}/image/upload`,{method:"POST",body:fd}),j=await r.json();
+  if(!r.ok)throw Error(j.error?.message||"Upload failed");return j.secure_url.replace("/upload/","/upload/f_auto,q_auto,w_1000/")}
+ async function publish(){const branch=int.branch||"main",path=int.path||"content.json";
+  if(!int.owner||!int.repo||!int.token)return msg("Add the GitHub owner, repository and token in Settings.",1);
+  const api=`https://api.github.com/repos/${int.owner}/${int.repo}/contents/${path}`,h={Authorization:"Bearer "+int.token,Accept:"application/vnd.github+json"};
+  try{msg("Publishing...");let sha;const g=await fetch(`${api}?ref=${encodeURIComponent(branch)}`,{headers:h});
+   if(g.ok)sha=(await g.json()).sha;else if(g.status!==404)throw Error("GitHub error "+g.status+" reading the file. Check owner, repository and token.");
+   const body={message:"Update site content via admin",branch,sha,content:btoa(unescape(encodeURIComponent(JSON.stringify(snapshot(),null,2))))};
+   const p=await fetch(api,{method:"PUT",headers:h,body:JSON.stringify(body)});if(!p.ok)throw Error("GitHub: "+((await p.json()).message||p.status));
+   msg("Published. The live site updates once your host redeploys.")}catch(e){msg(e.message,1)}}
+ root.oninput=e=>{const t=e.target;if(t.dataset.k!==undefined&&t.type!=="file")set(t.dataset.c,t.dataset.i,t.dataset.k,t.value)};
+ root.onchange=async e=>{const t=e.target;if(!t.matches("[data-up]")||!t.files[0])return;msg("Uploading...");
+  try{const u=await upload(t.files[0]);set(t.dataset.c,t.dataset.i,t.dataset.k,u);draw();msg("Image uploaded.")}catch(err){msg(err.message,1)}};
+ root.onclick=e=>{const b=e.target.closest("[data-act]");if(!b)return;const a=b.dataset.act,c=b.dataset.c,i=+b.dataset.i;
+  if(a==="tab"){tab=b.dataset.t;sessionStorage.setItem("fsai_tab",tab);return draw()}
+  if(a==="add"){COLL[c]().push(blank[c]());draftSave();return draw()}
+  if(a==="del"){if(confirm("Remove this entry?")){COLL[c]().splice(i,1);draftSave();draw()}return}
+  if(a==="up"||a==="down"){const arr=COLL[c](),j=a==="up"?i-1:i+1;if(j<0||j>=arr.length)return;[arr[i],arr[j]]=[arr[j],arr[i]];draftSave();return draw()}
+  if(a==="pub")return publish();
+  if(a==="export"){const l=document.createElement("a");l.href=URL.createObjectURL(new Blob([JSON.stringify(snapshot(),null,2)],{type:"application/json"}));l.download="content.json";l.click();return}
+  if(a==="reset"&&confirm("Discard your draft and reload the published content?")){localStorage.removeItem("fsai_draft");location.reload()}};
+ draw()}
+
+/* ===== 10b. INIT: published content.json, then local draft ===== */
+(async()=>{
+ try{const r=await fetch("content.json",{cache:"no-store"});if(r.ok)applyData(await r.json())}catch(e){}
+ try{const d=localStorage.getItem("fsai_draft");if(d)applyData(JSON.parse(d))}catch(e){}
+ footer();route()})();
 </script>
 </body>
 </html>
