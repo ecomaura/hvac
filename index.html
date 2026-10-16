@@ -96,7 +96,7 @@ footer ul{list-style:none;padding:0;margin:0}footer li{padding:4px 0;font-size:.
 <body>
 <a href="#main" class="btn sm" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
 <header><div class="wrap">
- <a class="logo" href="#/" data-link aria-label="FS Aircon & Infratech home"><img id="logoimg" src="images/fsai-logo.png" alt="FS Aircon & Infratech logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'FSAI'}))"><span>FS Aircon <small>& INFRATECH</small></span></a>
+ <a class="logo" href="#/" data-link aria-label="FS Aircon & Infratech home"><img id="logoimg" src="images/fsai-logo.png" alt="FS Aircon & Infratech logo" onerror="this.style.display='none'"><span>FS Aircon <small>& INFRATECH</small></span></a>
  <nav id="nav" aria-label="Main"><ul id="navlist"></ul></nav>
  <div class="row" style="flex-wrap:nowrap"><a class="btn hq" href="#/contact" data-link>Request a Quote</a>
  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div>
@@ -113,6 +113,7 @@ const CONFIG={
   email:"fsairconinfratech@gmail.com",
   gstin:"27CXLPA4596H1Z4",
   address:"Gr. Floor, Shop No. 3, Anwar Compound, Sainik Nagar, Almas Colony Road, Mumbra Kausa, Thane, Maharashtra – 400612, India",
+  logo:"images/fsai-logo.png",       // header logo: file path or URL (changeable in Admin > Settings)
   img:"images/products/"             // product image folder
 };
 let CLIENTS=[
@@ -264,7 +265,8 @@ function bindForm(){const f=document.getElementById("cf");if(!f)return;
  window.open(wa(msg),"_blank","noopener,noreferrer")}}
 
 /* ===== 11. ADMIN: content editor, Cloudinary upload, GitHub publish ===== */
-const CFG_KEYS=["name","whatsapp","email","address","gstin"];
+const CFG_KEYS=["logo","name","whatsapp","email","address","gstin"];
+function renderLogo(){const i=document.getElementById("logoimg");if(i){i.style.display="";i.src=/^https?:/.test(CONFIG.logo)?CONFIG.logo:CONFIG.logo||"images/fsai-logo.png"}}
 const snapshot=()=>({config:Object.fromEntries(CFG_KEYS.map(k=>[k,CONFIG[k]])),products:P,services:S,clients:CLIENTS});
 const draftSave=()=>localStorage.setItem("fsai_draft",JSON.stringify(snapshot()));
 function applyData(d){if(!d)return;if(d.config)CFG_KEYS.forEach(k=>{if(d.config[k]!=null)CONFIG[k]=d.config[k]});if(d.products)P=d.products;if(d.services)S=d.services;if(d.clients)CLIENTS=d.clients}
@@ -282,7 +284,7 @@ function adminInit(){
   :`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-i="${i}" data-k="${k}">${esc(val(o,k))}</textarea>`:`<input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}">`}</div>`;
  function set(c,i,k,v){
   if(c==="int"){int[k]=v;localStorage.setItem("fsai_int",JSON.stringify(int));return}
-  if(c==="config")CONFIG[k]=v;else{const o=COLL[c]()[+i];
+  if(c==="config"){CONFIG[k]=v;if(k==="logo")renderLogo()}else{const o=COLL[c]()[+i];
    if(k==="apps")o.apps=v.split("\n").map(x=>x.trim()).filter(Boolean);
    else if(k==="items")o.items=v.split("\n").filter(x=>x.trim()).map(x=>{const[a,...b]=x.split("|");return[a.trim(),b.join("|").trim()]});
    else o[k]=v}
@@ -291,7 +293,7 @@ function adminInit(){
   const T=[["products","Products"],["services","Services"],["clients","Clients"],["settings","Settings"],["publish","Publish"]];
   let h=`<div class="atabs">${T.map(([t,l])=>`<button class="btn sm ${t===tab?"":"o"}" data-act="tab" data-t="${t}">${l}</button>`).join("")}</div><p id="amsg" role="status"></p>`;
   if(COLL[tab]){h+=COLL[tab]().map((o,i)=>`<details class="card ad"><summary>${esc(o.n||o[0]||"Untitled")}</summary><div class="b">${FL[tab].map(f=>field(tab,i,o,f)).join("")}<div class="row"><button class="btn o sm" data-act="up" data-c="${tab}" data-i="${i}">Move up</button><button class="btn o sm" data-act="down" data-c="${tab}" data-i="${i}">Move down</button><button class="btn sm" style="background:#b3261e;border-color:#b3261e" data-act="del" data-c="${tab}" data-i="${i}">Remove</button></div></div></details>`).join("")+`<button class="btn" data-act="add" data-c="${tab}">Add ${tab.slice(0,-1)}</button>`}
-  else if(tab==="settings"){h+=`<h2>Business details</h2><div class="ag">${CFG_KEYS.map(k=>inp("config",k,k==="whatsapp"?"WhatsApp number (country code, no +)":k[0].toUpperCase()+k.slice(1),CONFIG[k])).join("")}</div>
+  else if(tab==="settings"){h+=`<h2>Logo</h2>${field("config","",CONFIG,["logo","Logo image (file path or URL)","img"])}<h2>Business details</h2><div class="ag">${CFG_KEYS.filter(k=>k!=="logo").map(k=>inp("config",k,k==="whatsapp"?"WhatsApp number (country code, no +)":k[0].toUpperCase()+k.slice(1),CONFIG[k])).join("")}</div>
    <h2>Cloudinary (unsigned upload)</h2><div class="ag">${inp("int","cloud","Cloud name",int.cloud)}${inp("int","preset","Unsigned upload preset",int.preset)}</div>
    <h2>GitHub</h2><div class="ag">${inp("int","owner","Owner",int.owner)}${inp("int","repo","Repository",int.repo)}${inp("int","branch","Branch (default main)",int.branch)}${inp("int","path","Content file path (default content.json)",int.path)}${inp("int","token","Personal access token",int.token,"password")}</div>
    <p class="note">Cloudinary and GitHub settings, including the token, are stored only in this browser. Use a fine-grained token limited to this repository with Contents read and write access.</p>`}
@@ -326,7 +328,7 @@ function adminInit(){
 (async()=>{
  try{const r=await fetch("content.json",{cache:"no-store"});if(r.ok)applyData(await r.json())}catch(e){}
  try{const d=localStorage.getItem("fsai_draft");if(d)applyData(JSON.parse(d))}catch(e){}
- footer();route()})();
+ renderLogo();footer();route()})();
 </script>
 </body>
 </html>
