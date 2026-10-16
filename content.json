@@ -1,6 +1,8 @@
 {
   "config": {
     "logo": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792143950/WhatsApp_Image_2026-10-16_at_11.58.57_1.jpg",
+    "hero": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792146051/360_F_2051731330_fnxz5BFXmOua8tcyvmKYYsKs7xHg6SlY.jpg",
+    "favicon": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792143950/WhatsApp_Image_2026-10-16_at_11.58.57_1.jpg",
     "name": "F S Aircon & Infratech",
     "whatsapp": "91YOURNUMBER",
     "email": "fsairconinfratech@gmail.com",
@@ -332,5 +334,22 @@
       "Flipkart",
       "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792144590/Flipkart-logo.jpg"
     ]
+  ],
+  "projects": [
+    {
+      "n": "Commercial HVAC",
+      "f": "",
+      "d": ""
+    },
+    {
+      "n": "Industrial cooling",
+      "f": "",
+      "d": ""
+    },
+    {
+      "n": "Ducting and ventilation",
+      "f": "",
+      "d": ""
+    }
   ]
 }
