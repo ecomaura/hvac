@@ -114,11 +114,14 @@ const CONFIG={
   gstin:"27CXLPA4596H1Z4",
   address:"Gr. Floor, Shop No. 3, Anwar Compound, Sainik Nagar, Almas Colony Road, Mumbra Kausa, Thane, Maharashtra – 400612, India",
   logo:"images/fsai-logo.png",       // header logo: file path or URL (changeable in Admin > Settings)
+  hero:"ahu.jpg",                    // homepage hero image (file in images/products/ or URL)
+  favicon:"",                        // optional favicon URL
   img:"images/products/"             // product image folder
 };
 let CLIENTS=[
   // ["Client name","filename in images/clients/"], e.g. ["ABC Industries","abc.png"],
 ];
+let PROJ=[{n:"Commercial HVAC",f:"",d:""},{n:"Industrial cooling",f:"",d:""},{n:"Ducting and ventilation",f:"",d:""}];
 const clientLogos=()=>CLIENTS.length
   ? CLIENTS.map(([n,f])=>`<div><img src="${/^https?:/.test(f)?f:'images/clients/'+f}" alt="${n}" loading="lazy" style="max-height:60px;max-width:80%;object-fit:contain"></div>`).join("")
   : Array(8).fill('<div>Client logo</div>').join("");
@@ -183,7 +186,7 @@ const cta=(h,msg)=>`<section class="s cta"><div class="wrap"><h2>${h||"Planning 
 const pages={
 home:()=>({t:"FS Aircon & Infratech | HVAC, Ducting & Industrial Cooling",d:"Commercial air conditioning, industrial cooling, ducting and ventilation equipment from Thane, Maharashtra.",h:`
 <section class="hero"><div class="wrap g"><div><h1>Engineered Climate Solutions for Modern Infrastructure</h1><p class="lead">From commercial air conditioning and industrial cooling to precision ducting and ventilation systems, FS Aircon & Infratech delivers practical HVAC solutions for demanding environments.</p><div class="row">${L("/contact","Discuss Your Project","btn wh")}${L("/products","Explore Our Products","btn o")}</div></div>
-<div class="ph">${pimg("ahu.jpg","Air handling unit installation",0)}</div></div></section>
+<div class="ph">${pimg(CONFIG.hero||"ahu.jpg","Air handling unit installation",0)}</div></div></section>
 <div class="strip"><div class="wrap"><ul><li>Commercial HVAC</li><li>Industrial Cooling</li><li>Ducting & Ventilation</li><li>HVAC Equipment Supply</li></ul></div></div>
 <section class="s"><div class="wrap"><h2>Product categories</h2><p class="lead">Nine categories of HVAC equipment and materials, supplied against your project requirements.</p><div class="grid">${P.map(pcard).join("")}</div></div></section>
 <section class="s alt"><div class="wrap"><h2>Solutions and applications</h2><div class="grid">${[["Commercial buildings","Cassette, ductable and VRV systems."],["Industrial facilities","Evaporative coolers, exhaust and ducting."],["Retail and office spaces","Compact comfort cooling."],["Kitchens","Hoods, exhaust fans and ducted extraction."],["Warehousing","Large-volume cooling and ventilation."]].map(([a,b])=>`<div class="card"><div class="b"><h3>${a}</h3><p>${b}</p></div></div>`).join("")}</div></div></section>
@@ -205,7 +208,7 @@ services:()=>({t:"Services | FS Aircon & Infratech",d:"HVAC equipment supply, sy
 clients:()=>({t:"Clients & Projects | FS Aircon & Infratech",d:"Client references and project photographs from FS Aircon & Infratech.",h:`
 <div class="pagehead">${crumb([["/","Home"],["/clients","Clients"]])}<div class="wrap"><h1>Clients and projects</h1><p class="lead">Verified client logos and project photographs will be shown here.</p></div></div>
 <section class="s"><div class="wrap"><h2>Clients</h2><div class="logos">${clientLogos()}</div>
-<h2 style="margin-top:40px">Project gallery</h2><div class="grid">${["Commercial HVAC","Industrial cooling","Ducting and ventilation"].map(c=>`<div class="card"><div class="im" style="display:flex;align-items:center;justify-content:center;color:#8896a3;font-size:.85rem">Project photo</div><div class="b"><h3>${c}</h3><p>Add a verified project description.</p></div></div>`).join("")}</div>
+<h2 style="margin-top:40px">Project gallery</h2><div class="grid">${PROJ.map(p=>`<div class="card"><div class="im" ${p.f?'':'style="display:flex;align-items:center;justify-content:center;color:#8896a3;font-size:.85rem"'}>${p.f?pimg(p.f,p.n):'Project photo'}</div><div class="b"><h3>${p.n}</h3><p>${p.d||'Add a verified project description.'}</p></div></div>`).join("")}</div>
 <div class="note" style="margin-top:24px">No client names or projects are shown until supplied and verified.</div></div></section>${cta()}`}),
 contact:()=>({t:"Contact Us | FS Aircon & Infratech",d:"Contact F S Aircon & Infratech, Mumbra Kausa, Thane. Request a quote on WhatsApp or email.",h:`
 <div class="pagehead">${crumb([["/","Home"],["/contact","Contact Us"]])}<div class="wrap"><h1>Contact Us</h1></div></div>
@@ -265,35 +268,35 @@ function bindForm(){const f=document.getElementById("cf");if(!f)return;
  window.open(wa(msg),"_blank","noopener,noreferrer")}}
 
 /* ===== 11. ADMIN: content editor, Cloudinary upload, GitHub publish ===== */
-const CFG_KEYS=["logo","name","whatsapp","email","address","gstin"];
-function renderLogo(){const i=document.getElementById("logoimg");if(i){i.style.display="";i.src=/^https?:/.test(CONFIG.logo)?CONFIG.logo:CONFIG.logo||"images/fsai-logo.png"}}
-const snapshot=()=>({config:Object.fromEntries(CFG_KEYS.map(k=>[k,CONFIG[k]])),products:P,services:S,clients:CLIENTS});
+const CFG_KEYS=["logo","hero","favicon","name","whatsapp","email","address","gstin"];
+function renderLogo(){const fv=document.querySelector("link[rel=icon]");if(fv&&CONFIG.favicon)fv.href=CONFIG.favicon;const i=document.getElementById("logoimg");if(i){i.style.display="";i.src=/^https?:/.test(CONFIG.logo)?CONFIG.logo:CONFIG.logo||"images/fsai-logo.png"}}
+const snapshot=()=>({config:Object.fromEntries(CFG_KEYS.map(k=>[k,CONFIG[k]])),products:P,services:S,clients:CLIENTS,projects:PROJ});
 const draftSave=()=>localStorage.setItem("fsai_draft",JSON.stringify(snapshot()));
-function applyData(d){if(!d)return;if(d.config)CFG_KEYS.forEach(k=>{if(d.config[k]!=null)CONFIG[k]=d.config[k]});if(d.products)P=d.products;if(d.services)S=d.services;if(d.clients)CLIENTS=d.clients}
+function applyData(d){if(!d)return;if(d.config)CFG_KEYS.forEach(k=>{if(d.config[k]!=null)CONFIG[k]=d.config[k]});if(d.products)P=d.products;if(d.services)S=d.services;if(d.clients)CLIENTS=d.clients;if(d.projects)PROJ=d.projects}
 function adminInit(){
- const root=document.getElementById("adm"),COLL={products:()=>P,services:()=>S,clients:()=>CLIENTS};
+ const root=document.getElementById("adm"),COLL={products:()=>P,services:()=>S,clients:()=>CLIENTS,projects:()=>PROJ};
  let int=JSON.parse(localStorage.getItem("fsai_int")||"{}"),tab=sessionStorage.getItem("fsai_tab")||"products";
  const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
  const msg=(t,bad)=>{const m=document.getElementById("amsg");if(m){m.textContent=t;m.style.color=bad?"#b3261e":"#1a7f45"}};
  const val=(o,k)=>k==="apps"?(o.apps||[]).join("\n"):k==="items"?(o.items||[]).map(a=>a.join(" | ")).join("\n"):o[k];
  const FL={products:[["n","Name"],["s","URL slug (letters, numbers, hyphens)"],["d","Short description","t"],["i","Introduction","t"],["f","Image","img"],["ref","WhatsApp enquiry phrase"],["apps","Applications (one per line)","t"],["items","Items (name | description, one per line)","t"]],
-  services:[["n","Name"],["t","Description","t"],["a","Typical use"],["p","Linked product slug (optional)"],["f","Image","img"]],clients:[["0","Client name"],["1","Logo","img"]]};
- const blank={products:()=>({s:"new-category-"+(Date.now()%10000),n:"New category",f:"",d:"",i:"",items:[],apps:[],ref:"new products"}),services:()=>({n:"New service",t:"",a:"",p:"",f:""}),clients:()=>["New client",""]};
+  services:[["n","Name"],["t","Description","t"],["a","Typical use"],["p","Linked product slug (optional)"],["f","Image","img"]],clients:[["0","Client name"],["1","Logo","img"]],projects:[["n","Title"],["d","Description","t"],["f","Photo","img"]]};
+ const blank={products:()=>({s:"new-category-"+(Date.now()%10000),n:"New category",f:"",d:"",i:"",items:[],apps:[],ref:"new products"}),services:()=>({n:"New service",t:"",a:"",p:"",f:""}),clients:()=>["New client",""],projects:()=>({n:"New project",f:"",d:""})};
  const inp=(c,k,l,v,type="text",t)=>`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-k="${k}">${esc(v)}</textarea>`:`<input type="${type}" data-c="${c}" data-k="${k}" value="${esc(v)}" autocomplete="off">`}</div>`;
  const field=(c,i,o,[k,l,t])=>t==="img"?`<div class="af"><label>${l}</label><input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}" placeholder="Image URL or file name">${(()=>{const u=val(o,k);return u&&/^https?:/.test(u)?`<img src="${esc(u)}" alt="" style="max-height:70px;margin-top:6px">`:""})()}<label class="btn o sm">Upload to Cloudinary<input type="file" accept="image/*" hidden data-up data-c="${c}" data-i="${i}" data-k="${k}"></label></div>`
   :`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-i="${i}" data-k="${k}">${esc(val(o,k))}</textarea>`:`<input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}">`}</div>`;
  function set(c,i,k,v){
   if(c==="int"){int[k]=v;localStorage.setItem("fsai_int",JSON.stringify(int));return}
-  if(c==="config"){CONFIG[k]=v;if(k==="logo")renderLogo()}else{const o=COLL[c]()[+i];
+  if(c==="config"){CONFIG[k]=v;renderLogo()}else{const o=COLL[c]()[+i];
    if(k==="apps")o.apps=v.split("\n").map(x=>x.trim()).filter(Boolean);
    else if(k==="items")o.items=v.split("\n").filter(x=>x.trim()).map(x=>{const[a,...b]=x.split("|");return[a.trim(),b.join("|").trim()]});
    else o[k]=v}
   draftSave()}
  function draw(){
-  const T=[["products","Products"],["services","Services"],["clients","Clients"],["settings","Settings"],["publish","Publish"]];
+  const T=[["products","Products"],["services","Services"],["clients","Clients"],["projects","Projects"],["settings","Settings"],["publish","Publish"]];
   let h=`<div class="atabs">${T.map(([t,l])=>`<button class="btn sm ${t===tab?"":"o"}" data-act="tab" data-t="${t}">${l}</button>`).join("")}</div><p id="amsg" role="status"></p>`;
   if(COLL[tab]){h+=COLL[tab]().map((o,i)=>`<details class="card ad"><summary>${esc(o.n||o[0]||"Untitled")}</summary><div class="b">${FL[tab].map(f=>field(tab,i,o,f)).join("")}<div class="row"><button class="btn o sm" data-act="up" data-c="${tab}" data-i="${i}">Move up</button><button class="btn o sm" data-act="down" data-c="${tab}" data-i="${i}">Move down</button><button class="btn sm" style="background:#b3261e;border-color:#b3261e" data-act="del" data-c="${tab}" data-i="${i}">Remove</button></div></div></details>`).join("")+`<button class="btn" data-act="add" data-c="${tab}">Add ${tab.slice(0,-1)}</button>`}
-  else if(tab==="settings"){h+=`<h2>Logo</h2>${field("config","",CONFIG,["logo","Logo image (file path or URL)","img"])}<h2>Business details</h2><div class="ag">${CFG_KEYS.filter(k=>k!=="logo").map(k=>inp("config",k,k==="whatsapp"?"WhatsApp number (country code, no +)":k[0].toUpperCase()+k.slice(1),CONFIG[k])).join("")}</div>
+  else if(tab==="settings"){h+=`<h2>Site images</h2><div class="ag">${[["logo","Logo"],["hero","Homepage hero image"],["favicon","Favicon (small square image)"]].map(([k,l])=>field("config","",CONFIG,[k,l,"img"])).join("")}</div><h2>Business details</h2><div class="ag">${CFG_KEYS.filter(k=>!["logo","hero","favicon"].includes(k)).map(k=>inp("config",k,k==="whatsapp"?"WhatsApp number (country code, no +)":k[0].toUpperCase()+k.slice(1),CONFIG[k])).join("")}</div>
    <h2>Cloudinary (unsigned upload)</h2><div class="ag">${inp("int","cloud","Cloud name",int.cloud)}${inp("int","preset","Unsigned upload preset",int.preset)}</div>
    <h2>GitHub</h2><div class="ag">${inp("int","owner","Owner",int.owner)}${inp("int","repo","Repository",int.repo)}${inp("int","branch","Branch (default main)",int.branch)}${inp("int","path","Content file path (default content.json)",int.path)}${inp("int","token","Personal access token",int.token,"password")}</div>
    <p class="note">Cloudinary and GitHub settings, including the token, are stored only in this browser. Use a fine-grained token limited to this repository with Contents read and write access.</p>`}
