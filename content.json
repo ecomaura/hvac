@@ -281,6 +281,104 @@
       "ref": "HVAC insulation sheets"
     }
   ],
+  "featured": [
+    {
+      "n": "Venti Cool 11U",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236330/111-u.png",
+      "d": "11,000 CMH airflow with three-way air discharge for flexible industrial cooling.",
+      "b": "3 Side Discharge\n(Top, Bottom & Side)",
+      "sp": [
+        "Air Delivery: 11000 CMH",
+        "Cooling Area: Up to 700 sq. ft.*",
+        "Power Consumption: 0.45 kW, 2 speed motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Venti Cool 20U",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236354/20-u.png",
+      "d": "20,000 CMH airflow with four-side cooling pads for efficient industrial cooling.",
+      "b": "2 Side Discharge\n(Top & Bottom)",
+      "sp": [
+        "Air Delivery: 20000 CMH",
+        "Cooling Area: Up to 1200 sq. ft.*",
+        "Power Consumption: 1.1 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Venti Cool 22S",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236382/Venti-Cool-22S-thumb.png",
+      "d": "22,000 CMH side-discharge cooler for efficient lateral airflow in industrial spaces.",
+      "b": "Side Discharge",
+      "sp": [
+        "Air Delivery: 22000 CMH",
+        "Cooling Area: Up to 1300 sq. ft.*",
+        "Power Consumption: 1.1 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Venti Cool 25U",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236422/Venti-Cool-25U.png",
+      "d": "25,000 CMH duct cooler with modular design for large industrial workspaces.",
+      "b": "Top & Bottom Discharge",
+      "sp": [
+        "Air Delivery: 25000 CMH",
+        "Cooling Area: Up to 1600 sq. ft.*",
+        "Power Consumption: 1.5 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Venti Cool 40",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236465/Venti-Cool-40.png",
+      "d": "40,000 CMH airflow with four-side cooling for expansive industrial facilities.",
+      "b": "Top / Bottom Discharge",
+      "sp": [
+        "Air Delivery: 40000 CMH",
+        "Cooling Area: Up to 2500 sq. ft.*",
+        "Power Consumption: 3 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Movicool XXL",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236494/Movicool-XXL.png",
+      "d": "Portable 20,000 CMH industrial cooler with auto-swing louvers and lockable wheels.",
+      "b": "Top Discharge",
+      "sp": [
+        "Air Delivery: 20000 CMH",
+        "Cooling Area: Up to 1500 sq. ft.*",
+        "Power Consumption: 1.1 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Venti Cool SPS45",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236521/SPS-45.png",
+      "d": "Stainless-steel chassis with Auto Clean and high-pressure airflow for demanding industries.",
+      "b": "Side Discharge",
+      "sp": [
+        "Air Delivery: 40000 CMH",
+        "Cooling Capacity: 150 kW",
+        "Power Consumption: 7.5 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    },
+    {
+      "n": "Venti Cool SPS75 / SPU75",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792236552/SPS-75.png",
+      "d": "High-pressure stainless-steel chassis with Auto Clean for long-distance industrial airflow.",
+      "b": "Side and Top Discharge",
+      "sp": [
+        "Air Delivery: 60000 CMH",
+        "Cooling Capacity: 260 kW",
+        "Power Consumption: 15 kW motor",
+        "Body Material: UV Stabilized Engineering Plastic"
+      ]
+    }
+  ],
   "services": [
     {
       "n": "HVAC Equipment Supply",
