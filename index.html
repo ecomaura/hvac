@@ -77,7 +77,7 @@ nav ul{flex-direction:column;align-items:stretch}nav a.nl,nav button.nl{padding:
 .fc{position:relative;display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .fc .im{aspect-ratio:1/1;background:#F5F5F5;border-radius:10px;margin:12px 12px 0;overflow:hidden}
 .fc .im img{width:100%;height:100%;object-fit:contain;padding:10px}
-.fc .im .ph-fallback{font-size:.78rem}
+.fc .im .ph-fallback{font-size:.78rem}.fc .im a{display:block;height:100%}.fc .tx h3 a,.fc .ov h3 a{color:inherit;text-decoration:none}.fc .tx h3 a:hover{color:var(--blue)}.fc .ov h3 a:hover{text-decoration:underline}
 .fc .tx{padding:18px 16px 16px;flex:1}
 .fc .tx h3{font-size:1.15rem;margin:0 0 .4em;color:#111}
 .fc .tx p{font-size:.95rem;line-height:1.55;margin:0;color:#333}
@@ -124,7 +124,7 @@ footer ul{list-style:none;padding:0;margin:0}footer li{padding:4px 0;font-size:.
 </div></header>
 <main id="main" tabindex="-1"></main>
 <footer id="footer"></footer>
-<a class="fab" id="fab" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.500c-.2.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.100.100.100.700-.1 1.300z"/></svg></a>
+<a class="fab" id="fab" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.3c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.500c-.2.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.1 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.100.100.100.700-.1 1.300z"/></svg></a>
 
 <script>
 /* ===== 7. WHATSAPP INTEGRATION (edit config here) ===== */
@@ -154,6 +154,16 @@ let FEAT=[
 {n:"Movicool XXL",f:"movicool-xxl.png",d:"Portable 20,000 CMH industrial cooler with auto-swing louvers and lockable wheels.",b:"Top Discharge",sp:["Air Delivery: 20000 CMH","Cooling Area: Up to 1500 sq. ft.*","Power Consumption: 1.1 kW motor","Body Material: UV Stabilized Engineering Plastic"]},
 {n:"Venti Cool SPS45",f:"venti-cool-sps45.png",d:"Stainless-steel chassis with Auto Clean and high-pressure airflow for demanding industries.",b:"Side Discharge",sp:["Air Delivery: 40000 CMH","Cooling Capacity: 150 kW","Power Consumption: 7.5 kW motor","Body Material: UV Stabilized Engineering Plastic"]},
 {n:"Venti Cool SPS75 / SPU75",f:"venti-cool-sps75.png",d:"High-pressure stainless-steel chassis with Auto Clean for long-distance industrial airflow.",b:"Side and Top Discharge",sp:["Air Delivery: 60000 CMH","Cooling Capacity: 260 kW","Power Consumption: 15 kW motor","Body Material: UV Stabilized Engineering Plastic"]}
+];
+
+/* Second home grid: portable commercial coolers. Same fields as FEAT. */
+let PORT=[
+{n:"Movicool DD 125",f:"movicool-dd-125.png",d:"Dual cooling units provide flexible airflow with independent double-decker operation.",b:"Front Discharge",sp:["For rooms up to: 710 sq. ft.*","Air volume: 17000 m³/hr","Wattage: 225 × 2 W","Body: Robust weather resistant body and 3-side dust filters."]},
+{n:"Movicool XL 200",f:"movicool-xl-200.png",d:"Powerful airflow for rooms up to 710 sq. ft.* for demanding commercial cooling.",b:"Front Discharge",sp:["For rooms up to: 710 sq. ft.*","Air Volume: 18000 m³/hr","Wattage: 605 W","Body: Robust weather resistant body and 3-side dust filters."]},
+{n:"Movicool L 200",f:"movicool-l-200.png",d:"Smart touchscreen commercial cooler with remote control and auto-swing airflow.",b:"Front Discharge",sp:["For rooms up to: 710 sq. ft.*","Air Volume: 8500 m³/hr","Wattage: 225 W","Body: Robust weather resistant body and 3-side dust filters."]},
+{n:"Movicool L 125",f:"movicool-l-125.png",d:"Whisper-quiet cooling with Cool Flow Dispenser and durable honeycomb technology.",b:"Front Discharge",sp:["For rooms up to: 678 sq. ft.*","Air Volume: 8500 m³/hr","Wattage: 225 W","Body: Robust weather resistant body and 3-side dust filters."]},
+{n:"Air Force 160",f:"air-force-160.png",d:"Heavy-duty commercial cooling with 21m air throw, 160L tank and honeycomb cooling.",b:"Front Discharge",sp:["Air Throw Distance: 21m*","Water Tank Capacity: 160L","Wattage: 445W","Body: Robust weather resistant body"]},
+{n:"Air Force 120",f:"air-force-120.png",d:"Powerful commercial cooling with 21m air throw and efficient honeycomb cooling.",b:"Front Discharge",sp:["Air Throw Distance: 21m*","Water Tank Capacity: 112L","Wattage: 325W","Body: Robust weather resistant body"]}
 ];
 const clientLogos=()=>CLIENTS.length
   ? CLIENTS.map(([n,f])=>`<div><img src="${/^https?:/.test(f)?f:'images/clients/'+f}" alt="${n}" loading="lazy" style="max-height:60px;max-width:80%;object-fit:contain"></div>`).join("")
@@ -212,11 +222,13 @@ const imgU=f=>/^https?:/.test(f)?f:CONFIG.img+f;
 const pimg=(f,alt,lz=1)=>`<img src="${imgU(f)}" alt="${alt}" width="400" height="300" ${lz?'loading="lazy"':''} onerror="this.outerHTML='<div class=ph-fallback>${alt.replace(/'/g,"")}<br>(add image: ${imgU(f)})</div>'">`;
 const L=(h,t,c="")=>`<a ${c?`class="${c}"`:''} href="#${h}" data-link>${t}</a>`;
 const crumb=a=>`<div class="wrap crumb" aria-label="Breadcrumb">${a.map(([h,t],i)=>i<a.length-1?`<a href="#${h}" data-link>${t}</a><span>/</span>`:`<span style="margin:0" aria-current="page">${t}</span>`).join("")}</div>`;
-const pcard=p=>`<article class="card"><div class="im">${pimg(p.f,p.n)}</div><div class="b"><h3>${p.n}</h3><p>${p.d}</p><div class="row">${L("/products/"+p.s,"View Details","btn o sm")}${waBtn("I would like to enquire about "+p.ref+".")}</div></div></article>`;
-const ARROW='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-const fcard=p=>`<article class="fc"><div class="im">${pimg(p.f,p.n)}</div><div class="tx"><h3>${p.n}</h3><p>${p.d}</p></div>
-<div class="ov"><h3>${p.n}</h3>${p.b?`<div class="badge">${p.b}</div>`:""}<ul class="sp">${(p.sp||[]).map(x=>`<li>${x}</li>`).join("")}</ul></div>
-${L("/products/symphony-air-coolers",`<span>More Details</span>${ARROW}`,"more")}</article>`;
+const WAI='<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>';
+/* One card design for every grid: image, text, hover specs, WhatsApp enquiry button (uses the WhatsApp number from Admin > Settings) */
+const gcard=(p,href,msg)=>`<article class="fc"><div class="im"><a href="#${href}" data-link tabindex="-1" aria-hidden="true">${pimg(p.f,p.n)}</a></div><div class="tx"><h3>${L(href,p.n)}</h3><p>${p.d}</p></div>
+<div class="ov"><h3>${L(href,p.n)}</h3>${p.b?`<div class="badge">${p.b}</div>`:""}<ul class="sp">${(p.sp||[]).map(x=>`<li>${x}</li>`).join("")}</ul></div>
+<a class="more" href="${wa(msg)}" target="_blank" rel="noopener noreferrer">${WAI}<span>Enquire on WhatsApp</span></a></article>`;
+const fcard=p=>gcard(p,"/products/symphony-air-coolers","I would like to enquire about the "+p.n+" air cooler.");
+const pcard=p=>gcard({n:p.n,f:p.f,d:p.d,b:"Typical applications",sp:p.apps},"/products/"+p.s,"I would like to enquire about "+p.ref+".");
 const cta=(h,msg)=>`<section class="s cta"><div class="wrap"><h2>${h||"Planning an HVAC Project?"}</h2><p>Tell us about your space, cooling requirements, or ventilation needs. Our team can help you explore suitable solutions.</p><div class="row">${L("/contact","Request a Quote","btn wh")}${waBtn(msg||"I am planning an HVAC project and would like to discuss it.","WhatsApp Our Team","wa")}</div></div></section>`;
 
 /* ===== 5. PAGE RENDERERS ===== */
@@ -226,9 +238,10 @@ home:()=>({t:"FS Aircon & Infratech | HVAC, Ducting & Industrial Cooling",d:"Com
 <div class="ph">${pimg(CONFIG.hero||"ahu.jpg","Air handling unit installation",0)}</div></div></section>
 <div class="strip"><div class="wrap"><ul><li>Commercial HVAC</li><li>Industrial Cooling</li><li>Ducting & Ventilation</li><li>HVAC Equipment Supply</li></ul></div></div>
 ${FEAT.length?`<section class="s"><div class="wrap"><h2>Symphony Venti Cool industrial air coolers</h2><p class="lead">High-airflow evaporative coolers for factories, workshops and large open spaces. Hover over a model to see its specifications.</p><div class="fgrid">${FEAT.map(fcard).join("")}</div><p class="fnote">*Cooling area is indicative and varies with climate, ventilation and heat load. Send us your space details for a model recommendation.</p></div></section>`:""}
-<section class="s alt"><div class="wrap"><h2>Product categories</h2><p class="lead">Nine categories of HVAC equipment and materials, supplied against your project requirements.</p><div class="grid">${P.map(pcard).join("")}</div></div></section>
-<section class="s"><div class="wrap"><h2>Solutions and applications</h2><div class="grid">${[["Commercial buildings","Cassette, ductable and VRV systems."],["Industrial facilities","Evaporative coolers, exhaust and ducting."],["Retail and office spaces","Compact comfort cooling."],["Kitchens","Hoods, exhaust fans and ducted extraction."],["Warehousing","Large-volume cooling and ventilation."]].map(([a,b])=>`<div class="card"><div class="b"><h3>${a}</h3><p>${b}</p></div></div>`).join("")}</div></div></section>
-<section class="s alt"><div class="wrap split"><div><h2>Why choose FS Aircon & Infratech?</h2><ul class="ticks"><li>Product selection matched to project requirements</li><li>Commercial and industrial HVAC solutions</li><li>Ducting and ventilation capability</li><li>Assistance with equipment specifications</li><li>Enquiry-driven project support</li></ul>${L("/about","About the company","btn o")}</div>
+${PORT.length?`<section class="s alt"><div class="wrap"><h2>Symphony commercial portable air coolers</h2><p class="lead">Efficient cooling, easy mobility, built for commercial use. Hover over a model to see its specifications.</p><div class="fgrid">${PORT.map(fcard).join("")}</div><p class="fnote">*Room size and air throw are indicative and vary with climate, ventilation and heat load. Send us your space details for a model recommendation.</p></div></section>`:""}
+<section class="s"><div class="wrap"><h2>Product categories</h2><p class="lead">Nine categories of HVAC equipment and materials, supplied against your project requirements.</p><div class="fgrid">${P.map(pcard).join("")}</div></div></section>
+<section class="s alt"><div class="wrap"><h2>Solutions and applications</h2><div class="grid">${[["Commercial buildings","Cassette, ductable and VRV systems."],["Industrial facilities","Evaporative coolers, exhaust and ducting."],["Retail and office spaces","Compact comfort cooling."],["Kitchens","Hoods, exhaust fans and ducted extraction."],["Warehousing","Large-volume cooling and ventilation."]].map(([a,b])=>`<div class="card"><div class="b"><h3>${a}</h3><p>${b}</p></div></div>`).join("")}</div></div></section>
+<section class="s"><div class="wrap split"><div><h2>Why choose FS Aircon & Infratech?</h2><ul class="ticks"><li>Product selection matched to project requirements</li><li>Commercial and industrial HVAC solutions</li><li>Ducting and ventilation capability</li><li>Assistance with equipment specifications</li><li>Enquiry-driven project support</li></ul>${L("/about","About the company","btn o")}</div>
 <div><h3>Our clients</h3><div class="logos">${clientLogos()}</div><p style="margin-top:14px">${L("/clients","View clients and projects","btn o sm")}</p></div></div></section>
 ${cta()}`}),
 about:()=>({t:"About Us | FS Aircon & Infratech",d:"About F S Aircon & Infratech, an HVAC and infrastructure equipment supplier based in Thane, Maharashtra.",h:`
@@ -238,7 +251,7 @@ about:()=>({t:"About Us | FS Aircon & Infratech",d:"About F S Aircon & Infratech
 <section class="s alt"><div class="wrap"><h2>Our approach</h2><div class="grid">${[["Understand the space","Area, layout, ceiling void and use."],["Match the equipment","Select from our product categories."],["Confirm specifications","Share model details before you decide."]].map(([a,b])=>`<div class="card"><div class="b"><h3>${a}</h3><p>${b}</p></div></div>`).join("")}</div></div></section>${cta()}`}),
 products:()=>({t:"Products | FS Aircon & Infratech",d:"Browse air conditioners, coolers, ducting, AHUs, exhaust systems and insulation sheets.",h:`
 <div class="pagehead">${crumb([["/","Home"],["/products","Products"]])}<div class="wrap"><h1>Products</h1><p class="lead">HVAC equipment and materials for commercial and industrial projects. Exact specifications are provided on request.</p></div></div>
-<section class="s"><div class="wrap"><div class="grid">${P.map(pcard).join("")}</div></div></section>${cta("Need help choosing?","I need help choosing HVAC equipment.")}`}),
+<section class="s"><div class="wrap"><div class="fgrid">${P.map(pcard).join("")}</div></div></section>${cta("Need help choosing?","I need help choosing HVAC equipment.")}`}),
 services:()=>({t:"Services | FS Aircon & Infratech",d:"HVAC equipment supply, system selection, ducting, ventilation and insulation.",h:`
 <div class="pagehead">${crumb([["/","Home"],["/services","Services"]])}<div class="wrap"><h1>Services</h1><p class="lead">Supply and support across HVAC equipment, ducting and ventilation.</p></div></div>
 <section class="s"><div class="wrap"><div class="grid">${S.map(s=>`<article class="card"><div class="im">${pimg(s.f,s.n)}</div><div class="b"><h3>${s.n}</h3><p>${s.t}</p><p><strong>Typical use:</strong> ${s.a}</p><div class="row">${s.p?L("/products/"+s.p,"View category","btn o sm"):""}${waBtn("I would like to enquire about "+s.n.toLowerCase()+".")}</div></div></article>`).join("")}</div>
@@ -267,7 +280,7 @@ function product(s){const p=P.find(x=>x.s===s);if(!p)return pages.nf();
 <section class="s"><div class="wrap split"><div class="gal"><div class="main" id="gm">${pimg(p.f,p.n,0)}</div><div class="thumbs"><button aria-pressed="true" aria-label="View ${p.n} image">${pimg(p.f,p.n)}</button></div></div>
 <div><h2>Typical applications</h2><ul class="ticks">${p.apps.map(a=>`<li>${a}</li>`).join("")}</ul><p>Exact model specifications are available on request. Send us your space and requirement for guidance.</p></div></div></section>
 <section class="s alt"><div class="wrap"><h2>Products in this category</h2><div class="grid">${p.items.map(([n,d])=>`<div class="card"><div class="b"><h3>${n}</h3><p>${d}</p>${waBtn("I would like details and a quotation for "+n+".")}</div></div>`).join("")}</div></div></section>
-<section class="s"><div class="wrap"><h2>Related categories</h2><div class="grid">${rel.map(pcard).join("")}</div></div></section>${cta("Need a quotation?","I would like a quotation for "+p.ref+".")}`}}
+<section class="s"><div class="wrap"><h2>Related categories</h2><div class="fgrid">${rel.map(pcard).join("")}</div></div></section>${cta("Need a quotation?","I would like a quotation for "+p.ref+".")}`}}
 
 /* ===== 3/9. NAV + FOOTER ===== */
 const NAV=[["/","Home"],["/about","About Us"],["/products","Products"],["/services","Services"],["/clients","Clients"],["/contact","Contact Us"]];
@@ -311,21 +324,22 @@ function bindForm(){const f=document.getElementById("cf");if(!f)return;
 /* ===== 11. ADMIN: content editor, Cloudinary upload, GitHub publish ===== */
 const CFG_KEYS=["logo","hero","favicon","name","whatsapp","email","address","gstin"];
 function renderLogo(){const fv=document.querySelector("link[rel=icon]");if(fv&&CONFIG.favicon)fv.href=CONFIG.favicon;const i=document.getElementById("logoimg");if(i){i.style.display="";i.src=/^https?:/.test(CONFIG.logo)?CONFIG.logo:CONFIG.logo||"images/fsai-logo.png"}}
-const snapshot=()=>({config:Object.fromEntries(CFG_KEYS.map(k=>[k,CONFIG[k]])),products:P,featured:FEAT,services:S,clients:CLIENTS,projects:PROJ});
+const snapshot=()=>({config:Object.fromEntries(CFG_KEYS.map(k=>[k,CONFIG[k]])),products:P,featured:FEAT,portable:PORT,services:S,clients:CLIENTS,projects:PROJ});
 const draftSave=()=>localStorage.setItem("fsai_draft",JSON.stringify(snapshot()));
-function applyData(d){if(!d)return;if(d.config)CFG_KEYS.forEach(k=>{if(d.config[k]!=null)CONFIG[k]=d.config[k]});if(d.products)P=d.products;if(d.featured)FEAT=d.featured;if(d.services)S=d.services;if(d.clients)CLIENTS=d.clients;if(d.projects)PROJ=d.projects}
+function applyData(d){if(!d)return;if(d.config)CFG_KEYS.forEach(k=>{if(d.config[k]!=null)CONFIG[k]=d.config[k]});if(d.products)P=d.products;if(d.featured)FEAT=d.featured;if(d.portable)PORT=d.portable;if(d.services)S=d.services;if(d.clients)CLIENTS=d.clients;if(d.projects)PROJ=d.projects}
 function adminInit(){
- const root=document.getElementById("adm"),COLL={products:()=>P,featured:()=>FEAT,services:()=>S,clients:()=>CLIENTS,projects:()=>PROJ};
+ const root=document.getElementById("adm"),COLL={products:()=>P,featured:()=>FEAT,portable:()=>PORT,services:()=>S,clients:()=>CLIENTS,projects:()=>PROJ};
  let int=JSON.parse(localStorage.getItem("fsai_int")||"{}"),tab=sessionStorage.getItem("fsai_tab")||"products";
  const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
  const msg=(t,bad)=>{const m=document.getElementById("amsg");if(m){m.textContent=t;m.style.color=bad?"#b3261e":"#1a7f45"}};
  const val=(o,k)=>k==="apps"?(o.apps||[]).join("\n"):k==="sp"?(o.sp||[]).join("\n"):k==="items"?(o.items||[]).map(a=>a.join(" | ")).join("\n"):o[k];
  const FL={products:[["n","Name"],["s","URL slug (letters, numbers, hyphens)"],["d","Short description","t"],["i","Introduction","t"],["f","Image","img"],["ref","WhatsApp enquiry phrase"],["apps","Applications (one per line)","t"],["items","Items (name | description, one per line)","t"]],
-  featured:[["n","Name"],["d","Description","t"],["b","Green badge text (e.g. Side Discharge)","t"],["sp","Hover specs (one per line)","t"],["f","Image","img"]],
+  featured:[["n","Name"],["d","Description","t"],["b","Green badge text (e.g. Side Discharge)","t"],["sp","Hover specs (one per line)","t"],["f","Image (file name in images/products/, a URL, or upload)","img"]],
+  portable:[["n","Name"],["d","Description","t"],["b","Green badge text (e.g. Front Discharge)","t"],["sp","Hover specs (one per line)","t"],["f","Image (file name in images/products/, a URL, or upload)","img"]],
   services:[["n","Name"],["t","Description","t"],["a","Typical use"],["p","Linked product slug (optional)"],["f","Image","img"]],clients:[["0","Client name"],["1","Logo","img"]],projects:[["n","Title"],["d","Description","t"],["f","Photo","img"]]};
- const blank={products:()=>({s:"new-category-"+(Date.now()%10000),n:"New category",f:"",d:"",i:"",items:[],apps:[],ref:"new products"}),featured:()=>({n:"New model",f:"",d:"",b:"Side Discharge",sp:["Air Delivery: 0 CMH","Cooling Area: Up to 0 sq. ft.*","Power Consumption: 0 kW motor","Body Material: UV Stabilized Engineering Plastic"]}),services:()=>({n:"New service",t:"",a:"",p:"",f:""}),clients:()=>["New client",""],projects:()=>({n:"New project",f:"",d:""})};
+ const blank={products:()=>({s:"new-category-"+(Date.now()%10000),n:"New category",f:"",d:"",i:"",items:[],apps:[],ref:"new products"}),portable:()=>({n:"New model",f:"",d:"",b:"Front Discharge",sp:["For rooms up to: 0 sq. ft.*","Air Volume: 0 m³/hr","Wattage: 0 W","Body: Robust weather resistant body"]}),featured:()=>({n:"New model",f:"",d:"",b:"Side Discharge",sp:["Air Delivery: 0 CMH","Cooling Area: Up to 0 sq. ft.*","Power Consumption: 0 kW motor","Body Material: UV Stabilized Engineering Plastic"]}),services:()=>({n:"New service",t:"",a:"",p:"",f:""}),clients:()=>["New client",""],projects:()=>({n:"New project",f:"",d:""})};
  const inp=(c,k,l,v,type="text",t)=>`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-k="${k}">${esc(v)}</textarea>`:`<input type="${type}" data-c="${c}" data-k="${k}" value="${esc(v)}" autocomplete="off">`}</div>`;
- const field=(c,i,o,[k,l,t])=>t==="img"?`<div class="af"><label>${l}</label><input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}" placeholder="Image URL or file name">${(()=>{const u=val(o,k);return u&&/^https?:/.test(u)?`<img src="${esc(u)}" alt="" style="max-height:70px;margin-top:6px">`:""})()}<label class="btn o sm">Upload to Cloudinary<input type="file" accept="image/*" hidden data-up data-c="${c}" data-i="${i}" data-k="${k}"></label></div>`
+ const field=(c,i,o,[k,l,t])=>t==="img"?`<div class="af"><label>${l}</label><input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}" placeholder="Image URL or file name">${(()=>{const u=val(o,k);return u?`<img src="${esc(imgU(u))}" alt="Current image preview" style="max-height:80px;margin-top:6px;background:#f5f5f5;border-radius:4px" onerror="this.style.display='none'">`:""})()}<label class="btn o sm">Upload to Cloudinary<input type="file" accept="image/*" hidden data-up data-c="${c}" data-i="${i}" data-k="${k}"></label></div>`
   :`<div class="af"><label>${l}</label>${t?`<textarea rows="3" data-c="${c}" data-i="${i}" data-k="${k}">${esc(val(o,k))}</textarea>`:`<input data-c="${c}" data-i="${i}" data-k="${k}" value="${esc(val(o,k))}">`}</div>`;
  function set(c,i,k,v){
   if(c==="int"){int[k]=v;localStorage.setItem("fsai_int",JSON.stringify(int));return}
@@ -335,9 +349,9 @@ function adminInit(){
    else o[k]=v}
   draftSave()}
  function draw(){
-  const T=[["products","Products"],["featured","Home grid"],["services","Services"],["clients","Clients"],["projects","Projects"],["settings","Settings"],["publish","Publish"]];
+  const T=[["products","Products"],["featured","Home grid 1"],["portable","Home grid 2"],["services","Services"],["clients","Clients"],["projects","Projects"],["settings","Settings"],["publish","Publish"]];
   let h=`<div class="atabs">${T.map(([t,l])=>`<button class="btn sm ${t===tab?"":"o"}" data-act="tab" data-t="${t}">${l}</button>`).join("")}</div><p id="amsg" role="status"></p>`;
-  if(COLL[tab]){h+=COLL[tab]().map((o,i)=>`<details class="card ad"><summary>${esc(o.n||o[0]||"Untitled")}</summary><div class="b">${FL[tab].map(f=>field(tab,i,o,f)).join("")}<div class="row"><button class="btn o sm" data-act="up" data-c="${tab}" data-i="${i}">Move up</button><button class="btn o sm" data-act="down" data-c="${tab}" data-i="${i}">Move down</button><button class="btn sm" style="background:#b3261e;border-color:#b3261e" data-act="del" data-c="${tab}" data-i="${i}">Remove</button></div></div></details>`).join("")+`<button class="btn" data-act="add" data-c="${tab}">Add ${tab==="featured"?"model":tab.slice(0,-1)}</button>`}
+  if(COLL[tab]){h+=COLL[tab]().map((o,i)=>`<details class="card ad"><summary>${esc(o.n||o[0]||"Untitled")}</summary><div class="b">${FL[tab].map(f=>field(tab,i,o,f)).join("")}<div class="row"><button class="btn o sm" data-act="up" data-c="${tab}" data-i="${i}">Move up</button><button class="btn o sm" data-act="down" data-c="${tab}" data-i="${i}">Move down</button><button class="btn sm" style="background:#b3261e;border-color:#b3261e" data-act="del" data-c="${tab}" data-i="${i}">Remove</button></div></div></details>`).join("")+`<button class="btn" data-act="add" data-c="${tab}">Add ${tab==="featured"||tab==="portable"?"model":tab.slice(0,-1)}</button>`}
   else if(tab==="settings"){h+=`<h2>Site images</h2><div class="ag">${[["logo","Logo"],["hero","Homepage hero image"],["favicon","Favicon (small square image)"]].map(([k,l])=>field("config","",CONFIG,[k,l,"img"])).join("")}</div><h2>Business details</h2><div class="ag">${CFG_KEYS.filter(k=>!["logo","hero","favicon"].includes(k)).map(k=>inp("config",k,k==="whatsapp"?"WhatsApp number (country code, no +)":k[0].toUpperCase()+k.slice(1),CONFIG[k])).join("")}</div>
    <h2>Cloudinary (unsigned upload)</h2><div class="ag">${inp("int","cloud","Cloud name",int.cloud)}${inp("int","preset","Unsigned upload preset",int.preset)}</div>
    <h2>GitHub</h2><div class="ag">${inp("int","owner","Owner",int.owner)}${inp("int","repo","Repository",int.repo)}${inp("int","branch","Branch (default main)",int.branch)}${inp("int","path","Content file path (default content.json)",int.path)}${inp("int","token","Personal access token",int.token,"password")}</div>
