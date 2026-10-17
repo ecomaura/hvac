@@ -379,6 +379,80 @@
       ]
     }
   ],
+  "portable": [
+    {
+      "n": "Movicool DD 125",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792237244/Movicool-DD125-RH-G.webp",
+      "d": "Dual cooling units provide flexible airflow with independent double-decker operation.",
+      "b": "Front Discharge",
+      "sp": [
+        "For rooms up to: 710 sq. ft.*",
+        "Air volume: 17000 m³/hr",
+        "Wattage: 225 × 2 W",
+        "Body: Robust weather resistant body and 3-side dust filters."
+      ]
+    },
+    {
+      "n": "Movicool XL 200",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792237273/Movicool-XL-200T-LH_1G.webp",
+      "d": "Powerful airflow for rooms up to 710 sq. ft.* for demanding commercial cooling.",
+      "b": "Front Discharge",
+      "sp": [
+        "For rooms up to: 710 sq. ft.*",
+        "Air Volume: 18000 m³/hr",
+        "Wattage: 605 W",
+        "Body: Robust weather resistant body and 3-side dust filters."
+      ]
+    },
+    {
+      "n": "Movicool L 200",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792237300/Movicool-L-200i-RHG.webp",
+      "d": "Smart touchscreen commercial cooler with remote control and auto-swing airflow.",
+      "b": "Front Discharge",
+      "sp": [
+        "For rooms up to: 710 sq. ft.*",
+        "Air Volume: 8500 m³/hr",
+        "Wattage: 225 W",
+        "Body: Robust weather resistant body and 3-side dust filters."
+      ]
+    },
+    {
+      "n": "Movicool L 125",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792237328/Movicool-L-125L-RH-G.webp",
+      "d": "Whisper-quiet cooling with Cool Flow Dispenser and durable honeycomb technology.",
+      "b": "Front Discharge",
+      "sp": [
+        "For rooms up to: 678 sq. ft.*",
+        "Air Volume: 8500 m³/hr",
+        "Wattage: 225 W",
+        "Body: Robust weather resistant body and 3-side dust filters."
+      ]
+    },
+    {
+      "n": "Air Force 160",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792237366/30.png",
+      "d": "Heavy-duty commercial cooling with 21m air throw, 160L tank and honeycomb cooling.",
+      "b": "Front Discharge",
+      "sp": [
+        "Air Throw Distance: 21m*",
+        "Water Tank Capacity: 160L",
+        "Wattage: 445W",
+        "Body: Robust weather resistant body"
+      ]
+    },
+    {
+      "n": "Air Force 120",
+      "f": "https://res.cloudinary.com/dhb3kt3hh/image/upload/f_auto,q_auto,w_1000/v1792237387/26.png",
+      "d": "Powerful commercial cooling with 21m air throw and efficient honeycomb cooling.",
+      "b": "Front Discharge",
+      "sp": [
+        "Air Throw Distance: 21m*",
+        "Water Tank Capacity: 112L",
+        "Wattage: 325W",
+        "Body: Robust weather resistant body"
+      ]
+    }
+  ],
   "services": [
     {
       "n": "HVAC Equipment Supply",
